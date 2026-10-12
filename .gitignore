@@ -24,3 +24,20 @@ Thumbs.db
 
 # Local exports / backups
 /tmp/
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+
+# Database dumps and private backups
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+private/
+backups/
