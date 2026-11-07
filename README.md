@@ -79,3 +79,20 @@ feat: add solutions section
 ```
 
 Frappe Builder's source repository is not modified as part of this project. This repository contains the Navari website project files and exported Builder configuration.
+
+## Review the improved website without Frappe
+
+```bash
+python scripts/preview_site.py
+python -m http.server 4173 --directory dist
+```
+
+Open http://localhost:4173. The preview supports all five static page layouts;
+dynamic stories and the contact submission endpoint require Frappe.
+Generated preview files are ignored by Git.
+
+See [the redesign notes](docs/website-audit/redesign.md) for verified content
+sources, changes, and Frappe import requirements. Upload the included logo as a
+public File at `/files/navari-logo.png` before publishing imported pages.
+
+Validate the exports with `python scripts/validate_exports.py`.
