@@ -1,3 +1,5 @@
+> Historical first-pass notes. See [overhaul v2](overhaul-v2.md) for the current implementation.
+
 # Website improvements — 7 November 2026
 
 The existing Frappe Builder page structure, IDs, routes, dynamic story bindings and contact Web Form are retained. Canonical migration pages, cloud creation payloads and the two homepage Builder exports now share the updated published blocks. Draft blocks match the updated published version.

@@ -37,7 +37,7 @@ def render(block, rules):
     attributes = ' '.join(f'{html.escape(k)}="{html.escape(str(v), quote=True)}"' for k, v in attrs.items() if v is not None)
     content = block.get('innerHTML', '')
     # Older Builder exports escaped quotes inside inline SVG markup.
-    if tag == 'svg':
+    if tag == 'svg' and '<svg' in content:
         tag = 'span'
         content = content.replace('\\"', '"')
     content += ''.join(render(c, rules) for c in block.get('children', []))
@@ -58,7 +58,7 @@ def main():
         selected = [scripts[row['builder_script']] for row in page['client_scripts']]
         css = '\n'.join(rules + [s['script'] for s in selected if s['script_type'] == 'CSS'])
         js = ''.join('<script>' + s['script'] + '</script>' for s in selected if s['script_type'] == 'JavaScript')
-        doc = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(page["page_title"])}</title>{page.get("head_html", "")}<style>{css}</style></head><body>{body}{js}</body></html>'
+        doc = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(page["page_title"])}</title><meta name="description" content="{html.escape(page.get('meta_description', ''), quote=True)}">{page.get("head_html", "")}<style>{css}</style></head><body>{body}{js}</body></html>'
         folder = OUT / name
         folder.mkdir(exist_ok=True)
         (folder / 'index.html').write_text(doc)

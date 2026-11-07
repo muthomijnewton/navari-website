@@ -4,112 +4,45 @@
       "name": "page-9a38be2a",
       "route": "home",
       "scripts": [
-        "Reveal Motion Styles",
-        "Reveal On Scroll",
-        "Mobile Nav Toggle",
-        "Products Dropdown Toggle",
-        "JavaScript-96058",
-        "JavaScript-b6af5",
-        "CSS-3cc9c",
-        "Nav Active Link Styles",
-        "Ecosystem Pill Details",
-        "Ecosystem Pill Toggle"
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions"
       ]
     },
     "about": {
       "name": "page-28ffc8fc",
       "route": "about",
       "scripts": [
-        "Reveal Motion Styles",
-        "Reveal On Scroll",
-        "Mobile Nav Toggle",
-        "Products Dropdown Toggle",
-        "JavaScript-96058",
-        "JavaScript-b6af5",
-        "CSS-3cc9c",
-        "Nav Active Link Styles",
-        "Products Dropdown Toggle",
-        "JavaScript-b6af5",
-        "Reveal On Scroll",
-        "Reveal Motion Styles",
-        "Nav Active Link Styles",
-        "About Motion Styles",
-        "About Section Motion",
-        "Mobile Nav Toggle"
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions"
       ]
     },
     "services": {
       "name": "page-bd2c9253",
       "route": "services",
       "scripts": [
-        "Reveal Motion Styles",
-        "Reveal On Scroll",
-        "Mobile Nav Toggle",
-        "Products Dropdown Toggle",
-        "JavaScript-96058",
-        "JavaScript-b6af5",
-        "CSS-3cc9c",
-        "Nav Active Link Styles",
-        "Services System Motion",
-        "Services System Interaction",
-        "JavaScript-96058",
-        "Products Dropdown Toggle",
-        "JavaScript-b6af5",
-        "Mobile Nav Toggle",
-        "Nav Active Link Styles"
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions"
       ]
     },
     "stories": {
       "name": "page-aadf94d4",
       "route": "stories",
       "scripts": [
-        "Reveal Motion Styles",
-        "Reveal On Scroll",
-        "Mobile Nav Toggle",
-        "Products Dropdown Toggle",
-        "JavaScript-96058",
-        "JavaScript-b6af5",
-        "CSS-3cc9c",
-        "Nav Active Link Styles",
-        "Stories Pagination"
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions"
       ]
     },
     "contacts": {
       "name": "page-e219bcee",
       "route": "contacts",
       "scripts": [
-        "Reveal Motion Styles",
-        "Reveal On Scroll",
-        "Mobile Nav Toggle",
-        "Products Dropdown Toggle",
-        "JavaScript-96058",
-        "JavaScript-b6af5",
-        "CSS-3cc9c",
-        "Nav Active Link Styles",
-        "Contact Hero Word Settle",
-        "Location Find Us Pulse",
-        "Save Navari Contact Submission submissions"
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions"
       ]
     }
   },
   "scripts": [
-    "About Motion Styles",
-    "About Section Motion",
-    "CSS-3cc9c",
-    "Contact Hero Word Settle",
-    "Ecosystem Pill Details",
-    "Ecosystem Pill Toggle",
-    "JavaScript-96058",
-    "JavaScript-b6af5",
-    "Location Find Us Pulse",
-    "Mobile Nav Toggle",
-    "Nav Active Link Styles",
-    "Products Dropdown Toggle",
-    "Reveal Motion Styles",
-    "Reveal On Scroll",
-    "Save Navari Contact Submission submissions",
-    "Services System Interaction",
-    "Services System Motion",
-    "Stories Pagination"
+    "Navari Website v2 Styles",
+    "Navari Website v2 Interactions"
   ]
 }
