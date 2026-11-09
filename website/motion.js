@@ -3,6 +3,8 @@
   const init = () => {
     if (!Element.prototype.animate) return;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let userPaused=false;
+    const shouldReduce=()=>preference.matches||userPaused;
     const active = new Set();
     const current = new WeakMap();
     const seen = new WeakSet();
@@ -13,7 +15,7 @@
       return rect.width && rect.height && rect.top < innerHeight && rect.bottom > 0;
     };
     const play = (element, frames, options = {}) => {
-      if (preference.matches || document.hidden || !element.getClientRects().length) return;
+      if (shouldReduce() || document.hidden || !element.getClientRects().length) return;
       current.get(element)?.cancel();
       const animation = element.animate(frames, {duration:650, easing:ease, ...options});
       current.set(element, animation);
@@ -39,7 +41,7 @@
     };
     const workspace = document.querySelector('.workspace');
     const animateWorkspace = () => {
-      if (!workspace || preference.matches) return;
+      if (!workspace || shouldReduce()) return;
       workspace.querySelectorAll('.metric').forEach((metric, index) => {
         play(metric, [{opacity:.3, transform:'translateY(14px)'},{opacity:1, transform:'translateY(0)'}], {delay:150 + index*100,fill:'backwards'});
       });
@@ -61,7 +63,7 @@
       '.hero-footnote','.ribbon-item','.workspace',
       '.page-hero .eyebrow','.page-hero h1','.page-hero .intro',
       '.section-top','.section > .wrap > h2','.section > .wrap > .eyebrow',
-      '.featured-story','.archive-top','.app-card','.trust-item','.pillar','.step','.story-card','.feature',
+      '.docs-card','.docs-library-heading','.docs-closing-inner','.featured-story','.archive-top','.app-card','.trust-item','.pillar','.step','.story-card','.feature',
       '.split > div','.contact-info','.consultation','.cta-inner > div','.faq details'
     ].join(',');
     const targets = [...document.querySelectorAll(selector)];
@@ -76,8 +78,8 @@
       });
     }, {threshold:0.08, rootMargin:'0px 0px -24px 0px'}) : null;
     const applyPreference = () => {
-      root.classList.toggle('motion-ready', !preference.matches);
-      if (preference.matches) {
+      root.classList.toggle('motion-ready', !shouldReduce());
+      if (shouldReduce()) {
         active.forEach(animation => animation.cancel());
         observer?.disconnect();
       } else {
@@ -88,11 +90,16 @@
         });
       }
     };
+    document.addEventListener('navari:motion-preference',event=>{
+      userPaused=event.detail?.paused===true;
+      root.classList.toggle('calm-mode',userPaused);
+      applyPreference();
+    });
     preference.addEventListener('change', applyPreference);
     applyPreference();
     // Reintroduce matching results when the visitor changes a filter.
     document.addEventListener('navari:filter', event => {
-      [...event.target.querySelectorAll('.app-card:not([hidden]),.story-card:not([hidden])')]
+      [...event.target.querySelectorAll('.app-card:not([hidden]),.story-card:not([hidden]),.docs-card:not([hidden])')]
         .filter(inView).forEach((element,index) => {
           observer?.unobserve(element);
           enter(element,Math.min(index,3)*55);

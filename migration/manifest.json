@@ -125,6 +125,16 @@
         "Navari Website Motion",
         "Navari Article Reading"
       ]
+    },
+    "documentation": {
+      "name": "navari-documentation",
+      "route": "documentation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Documentation Discovery"
+      ]
     }
   },
   "scripts": [
@@ -132,6 +142,7 @@
     "Navari Website v2 Interactions",
     "Navari Website Motion",
     "Navari Stories Archive",
-    "Navari Article Reading"
+    "Navari Article Reading",
+    "Navari Documentation Discovery"
   ]
 }

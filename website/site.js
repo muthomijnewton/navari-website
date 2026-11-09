@@ -23,7 +23,7 @@
       toTop.addEventListener('click', () => {
         toTop.classList.add('is-launching');
         document.querySelector('.header .brand')?.focus({preventScroll:true});
-        window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+        window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('calm-mode')?'instant':'smooth'});
       });
       updateToTop();
     }

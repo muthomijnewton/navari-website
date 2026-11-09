@@ -11,11 +11,14 @@ from html.parser import HTMLParser
 from pathlib import Path
 from story_archive import render_archive, render_story_cards, load_stories
 from article_pages import render_article
+from documentation_page import render_documentation
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'website'
 APPS = json.loads((SOURCE / 'apps.json').read_text())
 ICONS = {
+ 'sprout':'<path d="M12 21V11M12 14C5 14 3 10 3 5c6 0 9 3 9 7M12 10c0-5 3-8 9-8 0 6-3 10-9 10"/>',
+ 'fingerprint':'<path d="M4 12a8 8 0 0 1 16 0M7 15v-3a5 5 0 0 1 10 0v3M10 20c2-3 2-5 2-8M4 16v-1M7 20l1-3M16 21c2-3 3-6 3-9"/>',
  'ledger':'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h2M14 15h1M9 18h2M14 18h1"/>',
  'cart':'<path d="M3 4h2l2 12h11l3-8H6M9 20h.01M17 20h.01"/>',
  'people':'<circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M19 21v-3a6 6 0 0 0-2-4"/>',
@@ -58,6 +61,7 @@ def process():
  return '<section class="section process" id="approach"><div class="wrap"><p class="eyebrow">A partnership, from day one</p><h2>Good software starts<br>with <span class="serif">understanding you.</span></h2><div class="steps">'+''.join(f'<article class="step"><span class="number">0{i}</span><h3>{title}</h3><p>{copy}</p></article>' for i,(title,copy) in enumerate([('Understand','Start with your people, your priorities and the work that needs to flow better.'),('Map & configure','Translate real workflows into a practical system and a clear implementation plan.'),('Launch together','Prepare your data and teams, test the details and make the transition with care.'),('Keep improving','Stay supported as your business grows and your requirements evolve.')],1))+'</div></div></section>'
 def local():
  local_urls = {key: next(a['url'] for a in APPS if a['id'] == app_id) for key, app_id in [('phone', 'mpesa'), ('shield', 'compliance')]}
+ local_urls.update(people='/documentation?topic=biometrics#guides',box='/documentation?topic=industry#guides')
  return '<section class="section" id="local"><div class="wrap split"><div><p class="eyebrow">Global platform. Local connections.</p><h2>Your ERP should<br>speak <span class="serif">your language.</span></h2><p class="intro">Business happens in the details. Navari builds Frappe apps and integrations that connect your systems to the tools and requirements around you.</p><a class="text-link" href="https://docs.navari.co.ke/">Explore Navari documentation ↗</a></div><div class="local-stack">'+''.join(f'<a class="local-row" href="{local_urls.get(key, "https://docs.navari.co.ke/")}">'+icon(key)+f'<div><h3>{title} <span aria-hidden="true">↗</span></h3><p>{copy}</p></div></a>' for key,title,copy in [('phone','M-Pesa payments','Connect payments and disbursements with ERPNext.'),('shield','Kenya compliance','Explore integrations for KRA eTIMS.'),('people','Biometric attendance','Connect supported devices to Frappe HR.'),('box','Industry-specific apps','Explore utility billing, property management and more.')])+'</div></div></section>'
 def stories():
  return render_story_cards()
@@ -108,6 +112,8 @@ def page_blocks(content):
  def links(match):
   attrs = match.group(1)
   href = re.search(r'href="([^"]+)"', attrs).group(1)
+  if href.rstrip('/')=='https://docs.navari.co.ke':
+   return '<a'+attrs.replace('href="'+href+'"','href="/documentation"')+'>'
   if 'data-original-publication' not in attrs and href.rstrip('/') in records:
    attrs = attrs.replace('href="'+href+'"', 'href="'+records[href.rstrip('/')]+'"')
    return '<a'+attrs+'>'
@@ -118,12 +124,12 @@ def page_blocks(content):
 
 def main():
  manifest=json.loads((ROOT/'migration/manifest.json').read_text())
- scripts=[{'name':'Navari Website v2 Styles','script_type':'CSS','script':(SOURCE/'site.css').read_text()},{'name':'Navari Website v2 Interactions','script_type':'JavaScript','script':(SOURCE/'site.js').read_text()},{'name':'Navari Website Motion','script_type':'JavaScript','script':(SOURCE/'motion.js').read_text()},{'name':'Navari Stories Archive','script_type':'JavaScript','script':(SOURCE/'stories.js').read_text()},{'name':'Navari Article Reading','script_type':'JavaScript','script':(SOURCE/'article.js').read_text()}]
+ scripts=[{'name':'Navari Website v2 Styles','script_type':'CSS','script':(SOURCE/'site.css').read_text()},{'name':'Navari Website v2 Interactions','script_type':'JavaScript','script':(SOURCE/'site.js').read_text()},{'name':'Navari Website Motion','script_type':'JavaScript','script':(SOURCE/'motion.js').read_text()},{'name':'Navari Stories Archive','script_type':'JavaScript','script':(SOURCE/'stories.js').read_text()},{'name':'Navari Article Reading','script_type':'JavaScript','script':(SOURCE/'article.js').read_text()},{'name':'Navari Documentation Discovery','script_type':'JavaScript','script':(SOURCE/'documentation.js').read_text()}]
  write(ROOT/'migration/scripts/client_scripts.json',scripts)
- metadata={'home':('ERPNext & Frappe Solutions in Kenya | Navari Limited','Open-source business software with local expertise. Explore ERPNext, Frappe and Navari integrations for your business in Kenya and Africa.'),'services':('ERPNext Modules & Frappe Apps | Navari Solutions','Explore business software for finance, HR, CRM, manufacturing and more. Discover ERPNext modules, Frappe apps and local Navari integrations.'),'about':('About Navari | Your ERPNext Partner in Africa','Meet Navari Limited, Kenya’s first ERPNext Frappe Partner. ERP consultancy, implementation, customization and support from Nairobi.'),'stories':('Stories, Experiences & Insights | Navari Limited','Explore the Navari story archive: customer journeys, open-source perspectives and company news. Search articles and discover stories from across Africa.'),'contacts':('Talk to an ERP Specialist | Navari Limited','Discuss ERPNext, Frappe and your business requirements with Navari in Nairobi. Request a consultation or contact the team directly.')}
- for label,render in [('home',home),('services',services),('about',about),('stories',resources),('contacts',contacts)]:
-  page_scripts=scripts[:4] if label=='stories' else scripts[:3]
-  page_path=ROOT/f'migration/pages/{label}.json';page=json.loads(page_path.read_text())
+ metadata={'documentation':('Documentation & Guides | Navari Limited','Find documentation for Navari apps, payments, compliance and integrations. Search the application guides and discover your next step.'),'home':('ERPNext & Frappe Solutions in Kenya | Navari Limited','Open-source business software with local expertise. Explore ERPNext, Frappe and Navari integrations for your business in Kenya and Africa.'),'services':('ERPNext Modules & Frappe Apps | Navari Solutions','Explore business software for finance, HR, CRM, manufacturing and more. Discover ERPNext modules, Frappe apps and local Navari integrations.'),'about':('About Navari | Your ERPNext Partner in Africa','Meet Navari Limited, Kenya’s first ERPNext Frappe Partner. ERP consultancy, implementation, customization and support from Nairobi.'),'stories':('Stories, Experiences & Insights | Navari Limited','Explore the Navari story archive: customer journeys, open-source perspectives and company news. Search articles and discover stories from across Africa.'),'contacts':('Talk to an ERP Specialist | Navari Limited','Discuss ERPNext, Frappe and your business requirements with Navari in Nairobi. Request a consultation or contact the team directly.')}
+ for label,render in [('home',home),('services',services),('about',about),('stories',resources),('contacts',contacts),('documentation',lambda:render_documentation(icon))]:
+  page_scripts=scripts[:3]+[scripts[5]] if label=='documentation' else scripts[:4] if label=='stories' else scripts[:3]
+  page_path=ROOT/f'migration/pages/{label}.json';page=json.loads(page_path.read_text()) if page_path.exists() else {'doctype':'Builder Page','name':'navari-documentation','page_name':'navari-documentation','route':'documentation','published':1,'staging':0,'is_standard':0,'is_template':0,'dynamic_route':0,'authenticated_access':0,'disable_indexing':0}
   content=nav()+'<main id="main" tabindex="-1">'+render()+'</main>'+footer()
   content, blocks=page_blocks(content)
   page.update(blocks=blocks,head_html='',page_data_script='',page_title=metadata[label][0],meta_description=metadata[label][1],language='en',client_scripts=[{'builder_script':s['name']} for s in page_scripts])
@@ -140,7 +146,10 @@ def main():
     data=json.loads(variant.read_text())
     for key in ['blocks','draft_blocks','head_html','page_data_script','page_title','meta_description','client_scripts']:data[key]=page[key]
     write(variant,data)
+  manifest['pages'].setdefault(label,{'name':page['name'],'route':page['route']})
   manifest['pages'][label]['scripts']=[s['name'] for s in page_scripts]
+  if label=='documentation':
+   write(ROOT/'migration/pages/documentation-cloud-create.json',{key:value for key,value in page.items() if key not in {'name','draft_blocks'}})
  # Article routes retain the original published slugs for link compatibility.
  article_scripts=scripts[:3]+[scripts[4]]
  (SOURCE/'articles').mkdir(exist_ok=True)

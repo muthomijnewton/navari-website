@@ -193,3 +193,34 @@ media availability continues to depend on the original hosting services.
 A motion interaction found during QA was fixed: pointer focus no longer cancels
 an entrance transform between mouse-down and mouse-up, preventing interrupted
 link clicks. Keyboard focus still settles an active entrance.
+
+
+## Documentation hub redesign
+
+Added `/documentation`, matching the existing cream, ink, coral and lime theme.
+The hero uses soft light washes, pointer-follow illumination, a tilted guide panel
+and brief decorative star/orbit motion. Cards stagger into view and respond to
+hover. Decorative sequences finish within four seconds. Calm mode stops page
+motion; reduced-motion preferences are respected. All guide cards remain readable
+without JavaScript.
+
+The catalogue snapshots 18 applications across seven topics from
+https://docs.navari.co.ke/. Search, category filters, sorting, shareable URL state,
+reset and a slash-key search shortcut help visitors find a guide. Generic website
+documentation links now open this internal hub; individual guide links continue
+to open the original documentation service in new tabs. Seventeen guide
+destinations were verified. Vuna Transport's published `/vuna_transport` route
+returns HTTP 404, so its card is labelled unavailable and offers contact help.
+
+Sources: `website/documentation.json`, `website/documentation.js` and
+`scripts/documentation_page.py`. The manifest now contains 14 native pages,
+31 exports and six client scripts. Import the discovery script before creating
+`navari-documentation` from `documentation-cloud-create.json`. This change does
+not deploy or restyle the separate live documentation service. No dependencies
+or image downloads were added.
+
+Verified search, topics, sort, empty/reset states, keyboard search, Calm mode,
+and direct topic URLs; no horizontal overflow at 320, 768 and 1440px. Native
+Builder/Jinja rendering was checked, plus script-free and simulated reduced-motion
+fixtures. Export validation checks syntax, script references, routes, fragments
+and synchronized draft/published blocks.
