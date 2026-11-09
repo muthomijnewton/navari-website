@@ -5,7 +5,8 @@
       "route": "home",
       "scripts": [
         "Navari Website v2 Styles",
-        "Navari Website v2 Interactions"
+        "Navari Website v2 Interactions",
+        "Navari Website Motion"
       ]
     },
     "about": {
@@ -13,7 +14,8 @@
       "route": "about",
       "scripts": [
         "Navari Website v2 Styles",
-        "Navari Website v2 Interactions"
+        "Navari Website v2 Interactions",
+        "Navari Website Motion"
       ]
     },
     "services": {
@@ -21,7 +23,8 @@
       "route": "services",
       "scripts": [
         "Navari Website v2 Styles",
-        "Navari Website v2 Interactions"
+        "Navari Website v2 Interactions",
+        "Navari Website Motion"
       ]
     },
     "stories": {
@@ -29,7 +32,8 @@
       "route": "stories",
       "scripts": [
         "Navari Website v2 Styles",
-        "Navari Website v2 Interactions"
+        "Navari Website v2 Interactions",
+        "Navari Website Motion"
       ]
     },
     "contacts": {
@@ -37,12 +41,14 @@
       "route": "contacts",
       "scripts": [
         "Navari Website v2 Styles",
-        "Navari Website v2 Interactions"
+        "Navari Website v2 Interactions",
+        "Navari Website Motion"
       ]
     }
   },
   "scripts": [
     "Navari Website v2 Styles",
-    "Navari Website v2 Interactions"
+    "Navari Website v2 Interactions",
+    "Navari Website Motion"
   ]
 }

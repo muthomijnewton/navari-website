@@ -27,6 +27,7 @@ The preview cannot save enquiries: the contact form requires the Frappe backend.
 - `website/apps.json`: product catalogue, categories, feature summaries and links.
 - `website/site.css`: shared design system and responsive layouts.
 - `website/site.js`: menus, filters, deep links and consultation requests.
+- `website/motion.js`: section entrances, staggered cards and the workspace sequence.
 - `scripts/build_overhaul.py`: page composition and HTML-to-Builder compiler.
 - `website/*.html`: generated, inspectable HTML; edit the composition script.
 - `builder/`: synchronized homepage Builder exports.
@@ -61,7 +62,7 @@ The offline preview additionally serves the homepage at `/`.
 
 See [the overhaul and deployment notes](docs/website-audit/overhaul-v2.md).
 Upload `migration/assets/navari-logo.png` as a **public** File at
-`/files/navari-logo.png`, then import the Web Form/DocType if missing, the two
+`/files/navari-logo.png`, then import the Web Form/DocType if missing, the three
 client scripts and the page documents. Update existing pages by their exported
 names; use cloud-create payloads only to create new documents. Confirm the site
 homepage configuration and test a real enquiry on staging before production.

@@ -6,3 +6,56 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.app-card{scroll-margin-top:115px}a[aria-current=page]{text-decoration-color:var(--red)}
 .noscript-nav{display:flex;flex-wrap:wrap;gap:20px;padding:18px 0;font-size:14px}
+
+/* Motion layers: bounded entrances, playful affordances, no hidden content. */
+.header{transition:box-shadow 240ms ease,background-color 240ms ease}
+.header.is-scrolled{box-shadow:0 8px 28px #172d3210;background:#fffefa}
+.hero .accent,.page-hero .accent{position:relative;isolation:isolate}
+.hero .accent::after,.page-hero .accent::after{
+ content:'';position:absolute;left:-2%;right:-2%;bottom:.04em;height:.13em;
+ background:#e5edbb;z-index:-1;transform-origin:left center;
+ border-radius:55% 35% 40% 20%;pointer-events:none;
+}
+.motion-ready .hero .accent::after,.motion-ready .page-hero .accent::after{animation:navari-draw 850ms 180ms cubic-bezier(.22,1,.36,1) backwards}
+.motion-ready .menu:not([hidden]){animation:navari-menu-in 220ms cubic-bezier(.22,1,.36,1) both}
+.nav-trigger>span[aria-hidden]{transition:transform 220ms ease}
+.nav-trigger[aria-expanded=true]>span[aria-hidden]{transform:rotate(180deg)}
+.app-icon{transition:transform 360ms cubic-bezier(.22,1,.36,1),box-shadow 360ms ease}
+.btn{transition:background-color 200ms ease,transform 250ms cubic-bezier(.22,1,.36,1),box-shadow 250ms ease}
+.btn>span[aria-hidden]{display:inline-block;transition:transform 250ms cubic-bezier(.22,1,.36,1)}
+.app-card,.story-card,.feature{transition:transform 350ms cubic-bezier(.22,1,.36,1),box-shadow 350ms ease,border-color 250ms ease}
+.story-art>span{transition:transform 500ms cubic-bezier(.22,1,.36,1);display:inline-block}
+.local-row .app-icon{transition:transform 300ms cubic-bezier(.22,1,.36,1),background-color 250ms ease}
+.filter{transition:background-color 200ms ease,color 200ms ease,transform 200ms ease}
+.app-detail summary::after{transition:transform 200ms ease}
+.app-detail[open] summary::after{transform:rotate(180deg)}
+.motion-ready details[open]>:not(summary){animation:navari-detail-in 240ms cubic-bezier(.22,1,.36,1)}
+.workflow>span{padding:5px 8px;margin:-5px -8px;border-radius:5px}
+.field input,.field textarea,.field select{transition:border-color 180ms ease,box-shadow 180ms ease}
+.field:focus-within{color:var(--red)}
+.field input:focus,.field textarea:focus,.field select:focus{box-shadow:0 0 0 4px #c63d3409;border-color:var(--red)}
+@media(hover:hover) and (pointer:fine){
+ .ribbon-item:hover .app-icon,.ribbon-item:focus-visible .app-icon{transform:translateY(-7px) rotate(-5deg) scale(1.06);box-shadow:0 12px 22px #172d3216}
+ .app-card:hover,.story-card:hover,.feature:hover{transform:translateY(-6px);box-shadow:0 16px 35px #172d320c;border-color:#a9b9a5}
+ .app-card:hover .app-icon{transform:rotate(-5deg) scale(1.06)}
+ .story-card:hover .story-art>span{transform:rotate(-3deg) scale(1.06)}
+ .local-row:hover .app-icon{transform:translateX(4px) rotate(-4deg)}
+ .btn:hover{box-shadow:0 8px 18px #172d3215}
+ .btn:hover>span[aria-hidden]{transform:translate(3px,-3px)}
+ .filter:hover{transform:translateY(-2px)}
+}
+@media(max-width:900px){
+ .motion-ready .navlinks.open{animation:navari-drawer-in 280ms cubic-bezier(.22,1,.36,1) both}
+ .motion-ready .menu:not([hidden]){animation:navari-detail-in 200ms ease}
+}
+@keyframes navari-draw{from{transform:scaleX(0) rotate(-1deg)}to{transform:scaleX(1) rotate(0)}}
+@keyframes navari-menu-in{from{opacity:.2;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes navari-drawer-in{from{opacity:.3;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes navari-detail-in{from{opacity:.2;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .app-card:hover,.story-card:hover,.feature:hover,.ribbon-item:hover .app-icon,
+ .app-card:hover .app-icon,.local-row:hover .app-icon,.btn:hover,.filter:hover,
+ .story-card:hover .story-art>span,.btn:hover>span[aria-hidden]{transform:none!important}
+}

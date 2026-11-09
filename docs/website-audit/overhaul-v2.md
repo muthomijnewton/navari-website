@@ -65,7 +65,7 @@ Frappe Builder JSON is the deployment format.
 2. Upload the included logo as a public File at `/files/navari-logo.png`.
 3. Confirm the `Navari Contact Submission` DocType and `navari-contact-submission`
    Web Form exist, are published, and permit the intended guest submission flow.
-4. Import the two shared client scripts from `migration/scripts/client_scripts.json`.
+4. Import the three shared client scripts from `migration/scripts/client_scripts.json`.
 5. Update the five existing Builder Page documents from the canonical exports.
    Use cloud-create payloads only when creating new documents; preserve route/homepage settings.
 6. Verify successful persistence, CSRF/request-key requirements of the installed
@@ -79,7 +79,7 @@ browser checks used the user's local environment.
 
 ## Verification
 
-- All 13 exported page files validated; both shared JavaScript/CSS references resolved.
+- All 13 exported page files validated; all shared JavaScript/CSS references resolved.
 - JavaScript syntax, internal routes/fragments, unique block/HTML IDs and one H1 per page checked.
 - Five pages checked in the browser at 320, 768 and 1440px: no horizontal overflow.
 - App filtering, native details, contact preselection, desktop/mobile menus,
@@ -96,3 +96,28 @@ product/module URL in a new tab, with `noopener noreferrer`. Sales and Procureme
 are separate catalogue entries. The M-Pesa and Kenya compliance integration rows
 use their specific documentation pages. Internal contact and page navigation links
 continue within the website.
+
+## Visual motion — 9 November 2026
+
+A shared native Web Animations layer now adds once-per-view entrances for hero
+content, section introductions, app cards, trust points, steps, stories and forms.
+Sibling entrances stagger by at most 210ms. The workspace plays a short sequence
+through its sample workflow and then settles. Filter changes animate the visible
+results. There are no endless animations, animation libraries or new dependencies.
+
+CSS adds a drawn headline highlight, icon and button interactions, card lift,
+menu/drawer entrances, expanded-detail entrances and a subtle sticky-header shadow.
+Hover transforms apply only to fine pointers that support hover.
+
+Reduced-motion preferences disable scripted motion and CSS transitions, including
+when the preference changes during the session. Keyboard focus cancels an entrance
+on the focused element's container; hidden tabs settle active scripted animation.
+No preload/opacity-zero class is used, so unsupported animation APIs or missing
+JavaScript cannot strand invisible content.
+
+Validation: all 13 exports and three shared scripts passed; all five pages were
+checked at 320, 768 and 1440px without horizontal overflow. Product filtering,
+details, desktop and mobile menu/Escape behavior passed. Local QA fixtures emulated
+the reduced-motion branch/CSS and script-free fallback: content stayed visible,
+reduced mode did not enable the motion class, and the headline had no animation.
+The GIF preview records actual browser screenshots of the homepage entrance.
