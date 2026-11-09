@@ -319,3 +319,37 @@
 .calm-mode .docs-card:hover,.calm-mode .docs-card:hover .app-icon,.calm-mode .back-to-top:hover,.calm-mode .btn:hover{transform:none!important}
 @media(prefers-reduced-motion:reduce){.docs-light{left:80%!important;top:45%!important}.docs-card:hover,.docs-card:hover .app-icon{transform:none!important}}
 .docs-unavailable{font-size:8px;letter-spacing:.04em;color:#9b493a;background:#faeee5;padding:4px 7px;border-radius:3px;position:absolute;top:24px;right:16px}
+
+/* The field-guide visual language, shared by every page. */
+.hero,.page-hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at var(--glow-x,85%) var(--glow-y,70%),#dcebdcaa,transparent 58%),radial-gradient(ellipse at 8% 12%,#f2dfc766,transparent 58%),#f6f6ec}
+.hero::before,.page-hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 55% 20%,#e7edbd44,transparent 58%)}
+.hero h1 .serif,.page-hero h1 .serif{color:var(--red);text-decoration:underline;text-decoration-color:#dfe8b2;text-decoration-thickness:5px;text-underline-offset:7px;text-decoration-skip-ink:none}
+.hero>.wrap>.eyebrow::before,.page-hero .eyebrow::before{content:'✦';color:var(--red);font-size:18px;display:inline-block;margin-right:10px;vertical-align:middle;animation:navari-field-spark 1400ms ease-out both}
+.hero .eyebrow .status-dot{display:none}
+@keyframes navari-field-spark{from{opacity:.2;transform:rotate(-60deg) scale(.5)}to{opacity:1;transform:rotate(0) scale(1)}}
+.workspace{background:#fffefaeb;border-color:#fff;box-shadow:0 24px 65px #40574718}
+.app-card,.story-card,.feature,.consultation,.local-stack,.article-source,.article-takeaway{border-radius:14px;box-shadow:0 8px 28px #40574708}
+.app-card,.story-card,.feature{background:linear-gradient(145deg,#fffefa 50%,#f1f5e970);position:relative}
+.app-card .app-icon,.local-row .app-icon{box-shadow:0 7px 18px #4057470d;border-radius:15px}
+.section-top .eyebrow,.archive-top .eyebrow{color:#657b65}
+.process{background:radial-gradient(ellipse at 85% 70%,#dcebdc88,transparent 65%),#f4f3e9}
+.local-stack{background:linear-gradient(140deg,#f4f3e9,#e6eee1);border:1px solid #fff;padding-top:20px;padding-bottom:20px}
+.consultation{background:linear-gradient(150deg,#fffefa 65%,#edf3e6);border-color:#d8e1d4;box-shadow:0 22px 60px #4057470c}
+.field:focus-within{color:#426e69}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#78978b;box-shadow:0 0 0 3px #426e690c}
+.featured-story{border-radius:16px;box-shadow:0 20px 55px #4057470c}
+.article-takeaway{background:linear-gradient(135deg,#eef1dc,#e1ede4)}
+.article-source{background:linear-gradient(145deg,#f6f5eb,#edf3e8)}
+.cta{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 85% 0%,#f8f2db 0%,transparent 65%),linear-gradient(115deg,#e5edbb,#dcebdc)}
+.cta::after{content:'✦';position:absolute;right:5%;top:5%;font-size:150px;line-height:1;color:#718e5812;pointer-events:none;z-index:-1;transform:rotate(12deg)}
+.cta .serif{color:#52694d}
+.footer{background:radial-gradient(ellipse at 85% 100%,#2b4945,transparent 65%),var(--ink)}
+.site-calm{border:1px solid #b9ccbf66;background:transparent;color:#dbe6d4;border-radius:30px;padding:6px 12px;font-size:10px;min-height:36px;white-space:nowrap}
+.site-calm:hover,.site-calm[aria-pressed=true]{background:#e5edbb;color:var(--ink)}
+.footer-base{align-items:center;flex-wrap:wrap;gap:14px}
+@media(hover:hover) and (pointer:fine){
+.app-card:hover,.story-card:hover,.feature:hover{background:linear-gradient(145deg,#fffefa 25%,#edf3df);box-shadow:0 18px 45px #40574715;border-color:#b4c69e;transform:translateY(-6px) rotate(-.35deg)}
+}
+@media(max-width:600px){.hero h1 .serif,.page-hero h1 .serif{text-decoration-thickness:3px;text-underline-offset:5px}.cta::after{font-size:100px}.footer-base{align-items:flex-start}.site-calm{font-size:10px}}
+.calm-mode .app-card:hover,.calm-mode .story-card:hover,.calm-mode .feature:hover,.calm-mode .app-icon{transform:none!important}
+@media(prefers-reduced-motion:reduce){.hero .eyebrow::before,.page-hero .eyebrow::before{animation:none}.app-card:hover,.story-card:hover,.feature:hover{transform:none}}

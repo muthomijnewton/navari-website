@@ -3,7 +3,7 @@
   const init = () => {
     if (!Element.prototype.animate) return;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let userPaused=false;
+    let userPaused=document.documentElement.classList.contains('calm-mode');
     const shouldReduce=()=>preference.matches||userPaused;
     const active = new Set();
     const current = new WeakMap();
@@ -66,6 +66,22 @@
       '.docs-card','.docs-library-heading','.docs-closing-inner','.featured-story','.archive-top','.app-card','.trust-item','.pillar','.step','.story-card','.feature',
       '.split > div','.contact-info','.consultation','.cta-inner > div','.faq details'
     ].join(',');
+    // A quiet pool of light follows the pointer on spacious hero panels.
+    document.querySelectorAll('.hero,.page-hero').forEach(hero => {
+      let lightFrame;
+      hero.addEventListener('pointermove', event => {
+        if (shouldReduce() || event.pointerType !== 'mouse' || lightFrame) return;
+        lightFrame = requestAnimationFrame(() => {
+          lightFrame = null;
+          const rect = hero.getBoundingClientRect();
+          hero.style.setProperty('--glow-x', `${Math.round((event.clientX-rect.left)/rect.width*100)}%`);
+          hero.style.setProperty('--glow-y', `${Math.round((event.clientY-rect.top)/rect.height*100)}%`);
+        });
+      }, {passive:true});
+      hero.addEventListener('pointerleave', () => {
+        hero.style.removeProperty('--glow-x');hero.style.removeProperty('--glow-y');
+      });
+    });
     const targets = [...document.querySelectorAll(selector)];
     targets.forEach(element => element.setAttribute('data-motion',''));
     const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {

@@ -6,6 +6,25 @@
     document.addEventListener('keydown', event => {
       if (event.key === 'Tab' || event.key.startsWith('Arrow')) document.documentElement.classList.remove('pointer-focus');
     }, true);
+    const calmButtons = [...document.querySelectorAll('[data-site-calm],[data-doc-calm]')];
+    const setCalm = paused => {
+      document.documentElement.classList.toggle('calm-mode', paused);
+      calmButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(paused));
+        button.textContent = paused ? 'Calm mode on ◌' : 'Calm mode ◌';
+      });
+      try { sessionStorage.setItem('navari-calm', String(paused)); } catch (_) {}
+    };
+    document.querySelectorAll('[data-site-calm]').forEach(button => {
+      button.hidden = false;
+      button.addEventListener('click', () => {
+        const paused = button.getAttribute('aria-pressed') !== 'true';
+        setCalm(paused);
+        document.dispatchEvent(new CustomEvent('navari:motion-preference', {detail:{paused}}));
+      });
+    });
+    document.addEventListener('navari:motion-preference', event => setCalm(event.detail?.paused === true));
+    try { setCalm(sessionStorage.getItem('navari-calm') === 'true'); } catch (_) {}
     const toTop = document.querySelector('[data-back-to-top]');
     if (toTop) {
       let topFrame;

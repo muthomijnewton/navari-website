@@ -224,3 +224,24 @@ and direct topic URLs; no horizontal overflow at 320, 768 and 1440px. Native
 Builder/Jinja rendering was checked, plus script-free and simulated reduced-motion
 fixtures. Export validation checks syntax, script references, routes, fragments
 and synchronized draft/published blocks.
+
+
+## Field-guide design across the website
+
+Extended the documentation hub's visual language to all 14 native pages: cream,
+mint and lime hero lighting, coral serif accents with lime underlines, brief
+spark entrances, translucent workspace styling, softly lit rounded cards,
+warm contact and editorial panels, and gradient closing/footer sections. Shared
+hero lighting follows mouse movement and stops under reduced motion or Calm mode.
+Existing card entrances and interactions remain progressively enhanced.
+
+Calm mode is now available in every footer and synchronized with the documentation
+control. The choice persists for navigation within the browser session; blocked
+storage does not prevent the control working. Mouse focus remains subtle and
+keyboard focus retains its visible indicator. No business copy or URLs changed.
+
+Verified representative pages for every layout (home, services, about, archive,
+contact, article and documentation) at 320, 768 and 1440px without horizontal
+overflow. Verified Calm mode remains enabled after navigating from documentation
+to Contacts, with shared motion disabled, and can be turned off again. All 31
+page exports and six script references pass validation.
