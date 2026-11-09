@@ -383,9 +383,9 @@
 @keyframes navari-star-twinkle{0%,100%{opacity:.58;transform:scale(.89) rotate(-5deg)}25%{opacity:.82;transform:scale(1.01) rotate(0)}44%{opacity:.66;transform:scale(.95) rotate(2deg)}60%{opacity:1;transform:scale(1.1) rotate(5deg)}78%{opacity:.76;transform:scale(.98) rotate(0)}}
 @keyframes navari-shooting-star{0%,75%{opacity:0;transform:translate(-70px,-20px) rotate(28deg) scaleX(.6)}78%{opacity:.75}84%,100%{opacity:0;transform:translate(140px,110px) rotate(28deg) scaleX(1)}}
 .back-to-top{box-shadow:0 6px 24px #172d3235,inset 5px 4px 12px #ffffff08}
-.back-to-top::before{inset:-8px;border:1px solid #e5edbb66;background:radial-gradient(circle,transparent 58%,#e5edbb18 72%,transparent 76%);box-shadow:0 0 13px 3px #dbe9b333;opacity:.38}
+.back-to-top::before{inset:-7px;border:2px solid #4b6c5b;background:radial-gradient(circle,transparent 56%,#88a77626 72%,transparent 78%);box-shadow:0 0 0 3px #e5edbb99,0 0 16px 4px #426e6940;opacity:.72}
 .back-to-top:not([hidden])::before{animation:navari-moon-halo 5.8s ease-in-out infinite;animation-play-state:var(--sky-play,paused)}
-@keyframes navari-moon-halo{0%,100%{opacity:.3;transform:scale(1);box-shadow:0 0 12px 2px #dbe9b32b}50%{opacity:.75;transform:scale(1.16);box-shadow:0 0 23px 7px #dbe9b34d}}
+@keyframes navari-moon-halo{0%,100%{opacity:.65;transform:scale(1);box-shadow:0 0 0 3px #e5edbb99,0 0 13px 3px #426e6940}50%{opacity:.95;transform:scale(1.14);box-shadow:0 0 0 4px #e5edbb88,0 0 22px 6px #426e6966}}
 @media(max-width:600px){.sky-scene{right:2%;top:8px;width:140px;height:100px;opacity:.45}.sky-dot-one{font-size:15px;right:16px}.sky-dot-two{top:61px;left:26px}.sky-scene::after{width:60px}}
 .calm-mode .sky-scene::after{opacity:0!important}
 @media(prefers-reduced-motion:reduce){.sky-scene::after{opacity:0!important}.sky-dot,.sky-scene::after,.docs-floating-star,.docs-spark,.docs-scene-foot>span,.docs-empty>span,.guide-human>span,.hero>.wrap>.eyebrow::before,.page-hero .eyebrow::before,.cta::after,.back-to-top:not([hidden])::before{animation:none!important}}
