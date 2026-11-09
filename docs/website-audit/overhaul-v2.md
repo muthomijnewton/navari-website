@@ -294,3 +294,23 @@ Import the new application guide reading script, then create guide pages with
 website and hub documents should be updated after the guide pages exist.
 Generated guide exports and HTML are rebuilt from the committed snapshot;
 edit source content or layout sources rather than those generated files.
+
+## Living stars and lunar back-to-top halo
+
+Added a small decorative sky to each hero across all 240 pages. Existing star
+accents now twinkle at staggered, slow rhythms; the hero sky includes a brief,
+tapered shooting-star pass once every 18 seconds. The back-to-top button keeps
+its stable click target, progress rim and launch interaction while a separate
+halo layer softly breathes over a 5.8-second cycle.
+
+An IntersectionObserver runs these decorative CSS clocks only while their
+ornaments are visible. Hidden tabs pause them too. Calm mode stops the motion;
+reduced-motion CSS leaves static stars and suppresses the shooting-star pass.
+No timers, dependencies, canvas render loop or external assets were added.
+
+Verified live star/halo animation names and running states; off-screen star
+pause; Calm mode stopping both effects; back-to-top returning to the beginning;
+and reduced-motion CSS using an explicit preview fixture. Home, documentation
+hub and an app reader fit at 320px without horizontal overflow. All 483 exports
+and seven client scripts pass validation. Captured a full halo cycle from the
+browser for the preview animation.

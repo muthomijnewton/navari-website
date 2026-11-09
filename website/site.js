@@ -25,6 +25,16 @@
     });
     document.addEventListener('navari:motion-preference', event => setCalm(event.detail?.paused === true));
     try { setCalm(sessionStorage.getItem('navari-calm') === 'true'); } catch (_) {}
+    // Decorative CSS animation clocks run only while their ornaments are visible.
+    const skyTargets = document.querySelectorAll('.sky-scene,.docs-floating-star,.docs-spark,.docs-scene-foot>span,.docs-empty>span,.guide-human>span,.hero>.wrap>.eyebrow,.page-hero .eyebrow,.cta,[data-back-to-top]');
+    if ('IntersectionObserver' in window) {
+      const skyObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => entry.target.classList.toggle('sky-awake', entry.isIntersecting));
+      });
+      skyTargets.forEach(target => skyObserver.observe(target));
+    } else skyTargets.forEach(target => target.classList.add('sky-awake'));
+    const sleepSky = () => document.documentElement.classList.toggle('sky-sleeping', document.hidden);
+    document.addEventListener('visibilitychange', sleepSky); sleepSky();
     const toTop = document.querySelector('[data-back-to-top]');
     if (toTop) {
       let topFrame;

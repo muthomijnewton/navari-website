@@ -302,7 +302,7 @@
 .docs-closing h2{font-size:clamp(33px,3.7vw,50px)}
 .docs-closing .copy{font-size:14px;color:var(--muted);margin-top:20px}
 .motion-ready .docs-scene-card{animation:docs-card-arrive 950ms cubic-bezier(.22,1,.36,1) backwards}
-.motion-ready .docs-floating-star{animation:docs-star-turn 1800ms 180ms 2 cubic-bezier(.22,1,.36,1)}
+
 .motion-ready .docs-orbit path{stroke-dasharray:1400;stroke-dashoffset:0;animation:docs-orbit-draw 1800ms ease backwards}
 .motion-ready .docs-light{animation:docs-light-breathe 2000ms ease-in-out 2}
 @keyframes docs-card-arrive{from{opacity:.2;transform:translateY(28px) rotate(3deg)}to{opacity:1;transform:translateY(0) rotate(-2deg)}}
@@ -364,3 +364,28 @@
 
 .guide-prose p{max-width:75ch}
 @media(max-width:600px){.guide-search input{font-size:16px}}
+
+/* A living sky: slow stellar scintillation and a soft lunar corona. */
+.sky-scene{position:absolute;right:8%;top:18px;width:210px;height:135px;z-index:-1;overflow:hidden;pointer-events:none;color:#859d61;opacity:.65}
+.sky-dot{position:absolute;display:block;line-height:1;animation:navari-star-twinkle 6.7s ease-in-out infinite;animation-play-state:var(--sky-play,paused);transform-origin:center}
+.sky-dot-one{top:22px;right:27px;font-size:19px;animation-delay:-2.4s}
+.sky-dot-two{top:73px;left:28px;font-size:10px;color:#bf8571;animation-duration:8.3s;animation-delay:-5.1s}
+.sky-scene::after{content:'';position:absolute;left:5px;top:5px;width:85px;height:2px;border-radius:50%;background:linear-gradient(90deg,transparent,#a8bc84 70%,#f2f4d6);box-shadow:3px 0 6px #abc17b88;opacity:0;transform-origin:right center;animation:navari-shooting-star 18s -13s linear infinite;animation-play-state:var(--sky-play,paused)}
+.docs-floating-star,.docs-spark,.docs-scene-foot>span,.docs-empty>span,.guide-human>span{animation:navari-star-twinkle 6.4s ease-in-out infinite;animation-play-state:var(--sky-play,paused);transform-origin:center;display:inline-block}
+.docs-floating-star{animation-duration:7.2s;animation-delay:-1.6s}
+.docs-spark{animation-duration:5.8s;animation-delay:-3.1s}
+.docs-scene-foot>span{animation-duration:8.1s;animation-delay:-4.2s}
+.hero>.wrap>.eyebrow::before,.page-hero .eyebrow::before{animation:navari-star-twinkle 6.2s -1.8s ease-in-out infinite;animation-play-state:var(--sky-play,paused)}
+.docs-hero .eyebrow::before{content:none}
+.cta::after{animation:navari-star-twinkle 9s -4s ease-in-out infinite;animation-play-state:var(--sky-play,paused)}
+.sky-awake{--sky-play:running}
+.sky-sleeping .sky-awake{--sky-play:paused}
+@keyframes navari-star-twinkle{0%,100%{opacity:.58;transform:scale(.89) rotate(-5deg)}25%{opacity:.82;transform:scale(1.01) rotate(0)}44%{opacity:.66;transform:scale(.95) rotate(2deg)}60%{opacity:1;transform:scale(1.1) rotate(5deg)}78%{opacity:.76;transform:scale(.98) rotate(0)}}
+@keyframes navari-shooting-star{0%,75%{opacity:0;transform:translate(-70px,-20px) rotate(28deg) scaleX(.6)}78%{opacity:.75}84%,100%{opacity:0;transform:translate(140px,110px) rotate(28deg) scaleX(1)}}
+.back-to-top{box-shadow:0 6px 24px #172d3235,inset 5px 4px 12px #ffffff08}
+.back-to-top::before{inset:-8px;border:1px solid #e5edbb66;background:radial-gradient(circle,transparent 58%,#e5edbb18 72%,transparent 76%);box-shadow:0 0 13px 3px #dbe9b333;opacity:.38}
+.back-to-top:not([hidden])::before{animation:navari-moon-halo 5.8s ease-in-out infinite;animation-play-state:var(--sky-play,paused)}
+@keyframes navari-moon-halo{0%,100%{opacity:.3;transform:scale(1);box-shadow:0 0 12px 2px #dbe9b32b}50%{opacity:.75;transform:scale(1.16);box-shadow:0 0 23px 7px #dbe9b34d}}
+@media(max-width:600px){.sky-scene{right:2%;top:8px;width:140px;height:100px;opacity:.45}.sky-dot-one{font-size:15px;right:16px}.sky-dot-two{top:61px;left:26px}.sky-scene::after{width:60px}}
+.calm-mode .sky-scene::after{opacity:0!important}
+@media(prefers-reduced-motion:reduce){.sky-scene::after{opacity:0!important}.sky-dot,.sky-scene::after,.docs-floating-star,.docs-spark,.docs-scene-foot>span,.docs-empty>span,.guide-human>span,.hero>.wrap>.eyebrow::before,.page-hero .eyebrow::before,.cta::after,.back-to-top:not([hidden])::before{animation:none!important}}

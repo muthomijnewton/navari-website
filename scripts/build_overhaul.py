@@ -111,6 +111,9 @@ class Blocks(HTMLParser):
 def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
 
 def page_blocks(content):
+ # A small, decorative sky sits behind each hero, never over interactive content.
+ sky='<span class="sky-scene" aria-hidden="true"><span class="sky-dot sky-dot-one">✦</span><span class="sky-dot sky-dot-two">✦</span></span>'
+ content=re.sub(r'(<section\b[^>]*class="[^"]*\bhero\b[^"]*"[^>]*>)',lambda match:match[1]+sky,content,count=1)
  content += '<button class="back-to-top" type="button" data-back-to-top aria-label="Back to top" title="Back to top" hidden><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>'
  records = {record['url'].rstrip('/'): '/' + record['slug'] for record in load_stories()}
  guide_urls={record['source'].rstrip('/'): '/'+record['route'] for record in load_guides()['pages']}
