@@ -1,6 +1,11 @@
 /* Progressive enhancement: links, app details and all content work without JS. */
 (() => {
   const init = () => {
+    // Pointer clicks use the controls' border treatment; keyboard focus keeps a ring.
+    document.addEventListener('pointerdown', () => document.documentElement.classList.add('pointer-focus'), true);
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Tab' || event.key.startsWith('Arrow')) document.documentElement.classList.remove('pointer-focus');
+    }, true);
     const toTop = document.querySelector('[data-back-to-top]');
     if (toTop) {
       let topFrame;
