@@ -1,7 +1,7 @@
 # Navari website
 
 A responsive, product-led Navari Limited website for Frappe Builder. The redesign
-uses app discovery patterns inspired by Odoo, with original Navari content,
+uses app discovery patterns, with original Navari content,
 colour-coded app icons, an editorial layout and verified business details.
 
 ## Preview
