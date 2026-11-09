@@ -87,15 +87,6 @@
       window.addEventListener('hashchange', revealHash);
       revealHash();
     });
-    const stories = document.querySelector('.resource-filters');
-    if (stories) {
-      stories.hidden = false;
-      stories.querySelectorAll('[data-story-filter]').forEach(button => button.addEventListener('click', () => {
-        stories.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-        document.querySelectorAll('[data-story]').forEach(card => {card.hidden = button.dataset.storyFilter !== 'all' && card.dataset.story !== button.dataset.storyFilter;});
-        stories.parentElement.dispatchEvent(new CustomEvent('navari:filter', {bubbles:true}));
-      }));
-    }
     const form = document.querySelector('[data-consultation]');
     if (!form) return;
     const solution = new URLSearchParams(location.search).get('solution');

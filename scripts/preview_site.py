@@ -50,6 +50,9 @@ def main():
     OUT.mkdir(exist_ok=True)
     (OUT / 'files').mkdir(exist_ok=True)
     shutil.copyfile(ROOT / 'migration/assets/navari-logo.png', OUT / 'files/navari-logo.png')
+    for image in (ROOT / 'migration/assets/stories').glob('*'):
+        if image.is_file():
+            shutil.copyfile(image, OUT / 'files' / image.name)
     scripts = {s['name']: s for s in json.loads((ROOT / 'migration/scripts/client_scripts.json').read_text())}
     for name in ['home', 'about', 'services', 'stories', 'contacts']:
         page = json.loads((ROOT / f'migration/pages/{name}.json').read_text())

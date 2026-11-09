@@ -22,6 +22,7 @@ def main():
     for script in scripts:
         if script['script_type'] == 'JavaScript':
             subprocess.run(['node', '--check'], input=script['script'], text=True, check=True, capture_output=True)
+    asset_names = {asset.name for asset in (ROOT / 'migration/assets').rglob('*') if asset.is_file()}
     count = 0
     for path in [* (ROOT / 'migration/pages').glob('*.json'), * (ROOT / 'builder').glob('*.json')]:
         page = json.loads(path.read_text())
@@ -36,6 +37,8 @@ def main():
         for block in walk(blocks):
             for key in ['attributes', 'customAttributes']:
                 attrs = block.get(key, {})
+                if attrs.get('src', '').startswith('/files/'):
+                    assert Path(attrs['src']).name in asset_names, f'{path}: missing public asset {attrs["src"]}'
                 for value in attrs.values():
                     if isinstance(value, str):
                         assert 'navari.localhost' not in value, f'{path}: local URL'

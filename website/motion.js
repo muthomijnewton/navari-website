@@ -61,7 +61,7 @@
       '.hero-footnote','.ribbon-item','.workspace',
       '.page-hero .eyebrow','.page-hero h1','.page-hero .intro',
       '.section-top','.section > .wrap > h2','.section > .wrap > .eyebrow',
-      '.app-card','.trust-item','.pillar','.step','.story-card','.feature',
+      '.featured-story','.archive-top','.app-card','.trust-item','.pillar','.step','.story-card','.feature',
       '.split > div','.contact-info','.consultation','.cta-inner > div','.faq details'
     ].join(',');
     const targets = [...document.querySelectorAll(selector)];

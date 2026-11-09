@@ -28,6 +28,9 @@ The preview cannot save enquiries: the contact form requires the Frappe backend.
 - `website/site.css`: shared design system and responsive layouts.
 - `website/site.js`: menus, filters, deep links and consultation requests.
 - `website/motion.js`: section entrances, staggered cards and the workspace sequence.
+- `website/stories.json`: the published story snapshot, source links, dates and images.
+- `website/stories.js`: archive search, categories, pagination and shared URL state.
+- `scripts/story_archive.py`: featured story and archive/card composition.
 - `scripts/build_overhaul.py`: page composition and HTML-to-Builder compiler.
 - `website/*.html`: generated, inspectable HTML; edit the composition script.
 - `builder/`: synchronized homepage Builder exports.
@@ -53,7 +56,7 @@ unique HTML/block IDs, page headings and export consistency.
 | `/home` (site homepage) | Hero, eight featured apps, open-source benefits, integrations, delivery process and stories |
 | `/services` | Fifteen filterable solutions, product details, implementation services and FAQs |
 | `/about` | Company, approach, partnership recognition and careers enquiry |
-| `/stories` | Curated customer experiences and news linking to the official Navari archive |
+| `/stories` | Eight published stories with a featured article, images, search, category filters and pagination |
 | `/contacts` | Enquiry form with solution preselection and optional consultation preference |
 
 The offline preview additionally serves the homepage at `/`.
@@ -62,8 +65,9 @@ The offline preview additionally serves the homepage at `/`.
 
 See [the overhaul and deployment notes](docs/website-audit/overhaul-v2.md).
 Upload `migration/assets/navari-logo.png` as a **public** File at
-`/files/navari-logo.png`, then import the Web Form/DocType if missing, the three
-client scripts and the page documents. Update existing pages by their exported
+`/files/navari-logo.png`, upload all eight images in `migration/assets/stories/` as public Files using their
+existing filenames, then import the Web Form/DocType if missing, the four client
+scripts and the page documents. The archive script is attached only to Stories. Update existing pages by their exported
 names; use cloud-create payloads only to create new documents. Confirm the site
 homepage configuration and test a real enquiry on staging before production.
 

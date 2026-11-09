@@ -121,3 +121,36 @@ details, desktop and mobile menu/Escape behavior passed. Local QA fixtures emula
 the reduced-motion branch/CSS and script-free fallback: content stayed visible,
 reduced mode did not enable the motion class, and the headline had no animation.
 The GIF preview records actual browser screenshots of the homepage entrance.
+
+## Full Stories archive — 9 November 2026
+
+The Stories page is now the full archive in the existing Navari theme, replacing
+the three-card resource listing and its external archive exit. The screenshot's
+“Browse the full Navari archive” action now targets `#archive` on the redesigned
+page. Individual articles still open their original published URLs in new tabs.
+
+The source snapshot comes from the public WordPress posts API:
+`https://navari.co.ke/wp-json/wp/v2/posts?per_page=100&_embed=1`. It returned eight
+published posts (2020–2026), including the older Frappe partnership post that was
+not visible in the current two-page archive listing. Titles, publication dates,
+original URLs and original featured images were retained. Short summaries and the
+three browsing categories are editorial descriptions, not WordPress taxonomies.
+
+`website/stories.json` is the maintained content snapshot; it does not poll the
+live site at runtime. Add new records there and rebuild to extend the archive.
+Original image URLs are recorded for traceability. Eight optimized WebP assets
+(total about 290 KB) live in `migration/assets/stories/`; upload each as a public
+Frappe File with its existing filename, giving `/files/navari-story-<id>.webp`.
+The preview launcher copies them automatically.
+
+The archive has a featured story, six cards per page, category filters, search,
+empty-state recovery and URL state (`category`, `q`, `page`). Browser Back/Forward
+restores the collection state; category anchors from navigation remain supported.
+Without scripts all eight articles remain readable. Four client scripts are now
+exported; the new archive script is attached only to the Stories page.
+
+Verified: both pagination pages, Back navigation, category selection, search,
+no-result recovery, direct page/category URLs, internal archive action and the
+script-free fallback. The Stories layout passed 320, 768 and 1440px overflow checks.
+The installed native Builder renderer and registered Jinja filters also rendered
+the new archive successfully, with working filtering in its generated HTML.
