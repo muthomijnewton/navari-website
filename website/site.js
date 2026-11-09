@@ -1,6 +1,24 @@
 /* Progressive enhancement: links, app details and all content work without JS. */
 (() => {
   const init = () => {
+    const toTop = document.querySelector('[data-back-to-top]');
+    if (toTop) {
+      let topFrame;
+      const updateToTop = () => {
+        topFrame = null;
+        const visible = scrollY > 480;
+        if (!visible && document.activeElement === toTop) document.querySelector('.header .brand')?.focus({preventScroll:true});
+        toTop.hidden = !visible;
+      };
+      window.addEventListener('scroll', () => {
+        if (!topFrame) topFrame = requestAnimationFrame(updateToTop);
+      }, {passive:true});
+      toTop.addEventListener('click', () => {
+        document.querySelector('.header .brand')?.focus({preventScroll:true});
+        window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+      });
+      updateToTop();
+    }
     const toggle = document.querySelector('.nav-toggle');
     const navigation = document.querySelector('#navigation');
     const triggers = [...document.querySelectorAll('.nav-trigger')];

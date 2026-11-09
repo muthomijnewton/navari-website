@@ -103,6 +103,7 @@ class Blocks(HTMLParser):
 def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
 
 def page_blocks(content):
+ content += '<button class="back-to-top" type="button" data-back-to-top aria-label="Back to top" title="Back to top" hidden><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>'
  records = {record['url'].rstrip('/'): '/' + record['slug'] for record in load_stories()}
  def links(match):
   attrs = match.group(1)
