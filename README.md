@@ -33,6 +33,10 @@ The preview cannot save enquiries: the contact form requires the Frappe backend.
 - `website/articles.json`: concise article overviews and original PDF/webinar references.
 - `website/article.js`: reading progress, contents tracking, copy link and media loading.
 - `website/documentation.json`: app guide catalogue and verified documentation destinations.
+- `website/guides.json`: sanitized snapshot of 225 original documentation chapters and guide status.
+- `website/guide.js`: chapter search, mobile sidebar and reading utilities.
+- `scripts/guide_pages.py`: native application guide reading layouts.
+- `scripts/snapshot_guides.py`: explicit documentation refresh (requires beautifulsoup4).
 - `website/documentation.js`: guide search, topics, sorting, lighting and Calm mode.
 - `scripts/documentation_page.py`: documentation hub composition.
 - `scripts/article_pages.py`: native article reading layouts and related stories.
@@ -40,7 +44,7 @@ The preview cannot save enquiries: the contact form requires the Frappe backend.
 - `scripts/build_overhaul.py`: page composition and HTML-to-Builder compiler.
 - `website/*.html`: generated, inspectable HTML; edit the composition script.
 - `builder/`: synchronized homepage Builder exports.
-- `migration/`: fourteen canonical pages, cloud creation payloads, scripts and Web Form.
+- `migration/`: 240 canonical pages, cloud creation payloads, scripts and Web Form.
 
 After editing sources:
 
@@ -64,6 +68,7 @@ unique HTML/block IDs, page headings and export consistency.
 | `/about` | Company, approach, partnership recognition and careers enquiry |
 | `/stories` | Eight published stories with a featured article, images, search, category filters and pagination |
 | `/documentation` | Searchable guide hub for 18 applications, topic filters, lighting and motion controls |
+| `/documentation/{app}/{chapter}` | 225 full source chapters with app navigation, contents, media, code and tables; first chapters use `/documentation/{app}` |
 | `/contacts` | Enquiry form with solution preselection and optional consultation preference |
 | `/{original-story-slug}` | Eight native article pages with reading tools, related stories and access to original material |
 
@@ -74,19 +79,27 @@ The offline preview additionally serves the homepage at `/`.
 See [the overhaul and deployment notes](docs/website-audit/overhaul-v2.md).
 Upload `migration/assets/navari-logo.png` as a **public** File at
 `/files/navari-logo.png`, upload all eight images in `migration/assets/stories/` as public Files using their
-existing filenames, then import the Web Form/DocType if missing, the six client
+existing filenames, then import the Web Form/DocType if missing, the seven client
 scripts and the page documents. The archive script is attached only to Stories;
 the reading-tools script is attached only to article pages. The documentation
-discovery script is attached only to Documentation. Create the new hub using
+discovery script is attached only to Documentation; the application guide reading
+script is attached only to guide pages. Import the `guide-*-cloud-create.json`
+payloads to create the 226 guide documents using their supplied routes and names. Create the new hub using
 `migration/pages/documentation-cloud-create.json` (page name `navari-documentation`,
 route `documentation`). Use the article cloud-create
 payloads to create the eight new Builder Pages, preserving their supplied routes. Update existing pages by their exported
 names; use cloud-create payloads only to create new documents. Confirm the site
 homepage configuration and test a real enquiry on staging before production.
 
-The hub links to the existing detailed guides on `docs.navari.co.ke`; it does not
-replace that documentation service. The unavailable Vuna Transport guide routes
-visitors to Navari for help.
+The hub and product links open local application guides. Their technical content
+is a snapshot from `docs.navari.co.ke`, with source links retained and media served
+from the original host. The unavailable Vuna Transport guide has a status page
+offering Navari contact help. The separate live documentation service is unchanged.
+
+To refresh source content explicitly, run `python scripts/snapshot_guides.py` in
+a development environment with `beautifulsoup4` installed, then rebuild and validate.
+Routine builds use the committed snapshot and make no network requests. Review
+content changes and unavailable-page reports before publishing a refreshed snapshot.
 
 Repository updates do not deploy to `navari.co.ke` automatically. Backend
 persistence and email delivery must be verified on the target Frappe site.

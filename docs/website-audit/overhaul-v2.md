@@ -245,3 +245,52 @@ contact, article and documentation) at 320, 768 and 1440px without horizontal
 overflow. Verified Calm mode remains enabled after navigating from documentation
 to Contacts, with shared motion disabled, and can be turned off again. All 31
 page exports and six script references pass validation.
+
+
+## Application documentation readers
+
+Added 226 native reading pages under `/documentation/{app}`: 225 published
+chapters from 17 available applications, plus an honest unavailable-guide page
+for Vuna Transport. The main hub and product documentation links now open these
+readers. Source links remain external for reference; the separate live Wiki
+service has not been deployed or modified.
+
+The shared reading layout has a compact luminous app hero, coloured application
+mark, searchable chapter sidebar, highlighted current chapter, section index
+with scroll tracking, copy-link feedback, previous/next navigation, a practical
+help panel and the existing site footer/back-to-top/Calm mode. At mobile widths
+the chapter list becomes a disclosure. Tables scroll within the reading column;
+code retains whitespace; caution and informational callouts retain their
+meaning. Long-form instructions remain readable without JavaScript and do not
+use entrance motion while the visitor reads.
+
+`website/guides.json` stores the sanitized source snapshot captured on 9 Nov
+2026. `scripts/snapshot_guides.py` refreshes it explicitly using public Wiki
+sidebar routes and requires beautifulsoup4; normal builds are offline. It
+removes source scripts and interactive chrome, preserves instruction text,
+code, tables, source media and callouts, resolves URLs, and namespaces anchors.
+`guide_pages.py` composes the native layouts; `website/guide.js` adds reading
+utilities. `source` is treated as a void element by the compiler and preview
+renderer so video sources cannot swallow following document content.
+
+The preservation audit compared all 225 chapter texts and 118 code blocks
+against the captured public pages with no differences; counts of 145 image
+and 29 video references also match. Media remains on the original host and
+is loaded lazily/on request. Media availability still depends on that host.
+
+Responsive checks covered all 18 app entry pages at 320 and 1440px, plus four
+complex chapters at 320, 768 and 1440px, without horizontal page overflow.
+Verified chapter navigation, current-page state, search/empty states, mobile
+disclosure and restoration on desktop, section anchors and a script-free
+reading fixture. Native Builder/Jinja rendering passed for all 226 reading
+layouts, with full-page technical, French and unavailable-guide fixtures checked
+in the browser. Literal Jinja print-format examples were additionally compared
+against the source in both native Builder output and the preview. The compiler
+emits literal delimiters so technical examples cannot execute as page templates.
+
+The manifest now contains 240 native pages, 483 exports and seven scripts.
+Import the new application guide reading script, then create guide pages with
+`guide-*-cloud-create.json` using their supplied names and routes. Existing
+website and hub documents should be updated after the guide pages exist.
+Generated guide exports and HTML are rebuilt from the committed snapshot;
+edit source content or layout sources rather than those generated files.

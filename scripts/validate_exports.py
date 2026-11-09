@@ -64,6 +64,15 @@ def main():
             if link.fragment:
                 ids = {b.get('attributes', {}).get('id') for b in walk(json.loads(pages[target]['blocks']))}
                 assert link.fragment in ids, f'{name}: missing anchor {href}'
+    # Every application must have a local reading entry, including honest fallback pages.
+    catalogue = json.loads((ROOT / 'website/documentation.json').read_text())['applications']
+    guide_snapshot = json.loads((ROOT / 'website/guides.json').read_text())['pages']
+    for app in catalogue:
+        assert '/documentation/' + app['id'] in routes, f'Missing app reader: {app["id"]}'
+    for guide in guide_snapshot:
+        assert '/' + guide['route'] in routes, f'Missing guide: {guide["route"]}'
+        assert not any(token in guide['html'].lower() for token in ['<script', 'javascript:', '<iframe']), f'Unsafe guide content: {guide["route"]}'
+        assert guide['source'].startswith('https://docs.navari.co.ke/'), 'Unexpected source origin'
     print(f'Validated {count} page exports and {len(scripts)} client scripts; JavaScript syntax passed.')
 
 

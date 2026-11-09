@@ -135,6 +135,2266 @@
         "Navari Website Motion",
         "Navari Documentation Discovery"
       ]
+    },
+    "guide-df230551c96e6f": {
+      "name": "navari-guide-df230551c96e6f",
+      "route": "documentation/vunapos",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-18050d4522c8f9": {
+      "name": "navari-guide-18050d4522c8f9",
+      "route": "documentation/vunapos/installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-59bd51e8620445": {
+      "name": "navari-guide-59bd51e8620445",
+      "route": "documentation/vunapos/welcome/setting-up",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-10c472f5319e86": {
+      "name": "navari-guide-10c472f5319e86",
+      "route": "documentation/vunapos/getting-started/shifts",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-151e4bf58b23fa": {
+      "name": "navari-guide-151e4bf58b23fa",
+      "route": "documentation/vunapos/welcome/complete-a-sale",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3bbcbbe3fcc27d": {
+      "name": "navari-guide-3bbcbbe3fcc27d",
+      "route": "documentation/vunapos/selling/items-and-units",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a4f6e900ea6390": {
+      "name": "navari-guide-a4f6e900ea6390",
+      "route": "documentation/vunapos/selling/customers-and-addresses",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-dd8a63d99c7cf5": {
+      "name": "navari-guide-dd8a63d99c7cf5",
+      "route": "documentation/vunapos/selling/pricing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-588c45b13bf86a": {
+      "name": "navari-guide-588c45b13bf86a",
+      "route": "documentation/vunapos/selling/taxes",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f828b5590fc525": {
+      "name": "navari-guide-f828b5590fc525",
+      "route": "documentation/vunapos/selling/cash-customer-tax-id",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b3079ec1f921ce": {
+      "name": "navari-guide-b3079ec1f921ce",
+      "route": "documentation/vunapos/selling/batch-and-serial-allocation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-23fe642e3f0298": {
+      "name": "navari-guide-23fe642e3f0298",
+      "route": "documentation/vunapos/selling/draft-invoices",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-122534460c25dd": {
+      "name": "navari-guide-122534460c25dd",
+      "route": "documentation/vunapos/selling/sales-orders",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-fc9e5f625d733f": {
+      "name": "navari-guide-fc9e5f625d733f",
+      "route": "documentation/vunapos/selling/customer-loyalty-points",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e39fb48d20ca10": {
+      "name": "navari-guide-e39fb48d20ca10",
+      "route": "documentation/vunapos/selling/returns",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1b0bb8ba722cc0": {
+      "name": "navari-guide-1b0bb8ba722cc0",
+      "route": "documentation/vunapos/payment-guides/checkout",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-4e6d7b43b979bb": {
+      "name": "navari-guide-4e6d7b43b979bb",
+      "route": "documentation/vunapos/selling/mpesa-integration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-83838fbbce8684": {
+      "name": "navari-guide-83838fbbce8684",
+      "route": "documentation/vunapos/selling/receiving-and-reconciling-payments",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1e5e302234a09c": {
+      "name": "navari-guide-1e5e302234a09c",
+      "route": "documentation/vunapos/payment-guides/printing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-bd960fff8a3949": {
+      "name": "navari-guide-bd960fff8a3949",
+      "route": "documentation/vunapos/restaurant/overview",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-8dfb9c896bfa6e": {
+      "name": "navari-guide-8dfb9c896bfa6e",
+      "route": "documentation/vunapos/restaurant/setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a1a3cd495e4e82": {
+      "name": "navari-guide-a1a3cd495e4e82",
+      "route": "documentation/vunapos/restaurant/menus",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c454fca98716dc": {
+      "name": "navari-guide-c454fca98716dc",
+      "route": "documentation/vunapos/restaurant/floors",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e764951373b099": {
+      "name": "navari-guide-e764951373b099",
+      "route": "documentation/vunapos/restaurant/kitchen-setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5cf0b5ff1ef0dd": {
+      "name": "navari-guide-5cf0b5ff1ef0dd",
+      "route": "documentation/vunapos/restaurant/taking-orders",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-fd9e05c27bd45f": {
+      "name": "navari-guide-fd9e05c27bd45f",
+      "route": "documentation/vunapos/restaurant/kitchen",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9b1bd1dd3b1128": {
+      "name": "navari-guide-9b1bd1dd3b1128",
+      "route": "documentation/vunapos/restaurant/billing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3b73080351e239": {
+      "name": "navari-guide-3b73080351e239",
+      "route": "documentation/vunapos/restaurant/troubleshooting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b0e90f2bf8399e": {
+      "name": "navari-guide-b0e90f2bf8399e",
+      "route": "documentation/vunapos/manage/checkout-and-workflows",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0f957e33a382d9": {
+      "name": "navari-guide-0f957e33a382d9",
+      "route": "documentation/vunapos/manage/staff-access",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3ac32a31183512": {
+      "name": "navari-guide-3ac32a31183512",
+      "route": "documentation/vunapos/help/recovery",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-601657045059d3": {
+      "name": "navari-guide-601657045059d3",
+      "route": "documentation/vunapos/help/common-problems",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-95ce015ee268bc": {
+      "name": "navari-guide-95ce015ee268bc",
+      "route": "documentation/ohada-en",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-448d5b514d7784": {
+      "name": "navari-guide-448d5b514d7784",
+      "route": "documentation/ohada-en/coa",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-096262c4cf33fe": {
+      "name": "navari-guide-096262c4cf33fe",
+      "route": "documentation/ohada-en/account-categories",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ad66e0cc8bbe3b": {
+      "name": "navari-guide-ad66e0cc8bbe3b",
+      "route": "documentation/ohada-en/ohada-financial-report-template",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c7e82e200c22a0": {
+      "name": "navari-guide-c7e82e200c22a0",
+      "route": "documentation/ohada-en/value-columns",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-154e21ad9146ca": {
+      "name": "navari-guide-154e21ad9146ca",
+      "route": "documentation/ohada-en/custom-api-rows",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-7a33200da910df": {
+      "name": "navari-guide-7a33200da910df",
+      "route": "documentation/ohada-en/other-reports",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-fa1982c971e3b2": {
+      "name": "navari-guide-fa1982c971e3b2",
+      "route": "documentation/ohada-fr",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f0c89656bfe01e": {
+      "name": "navari-guide-f0c89656bfe01e",
+      "route": "documentation/ohada-fr/coa",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-667c670602a7c5": {
+      "name": "navari-guide-667c670602a7c5",
+      "route": "documentation/ohada-fr/account-categories",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1788e1a5c9df74": {
+      "name": "navari-guide-1788e1a5c9df74",
+      "route": "documentation/ohada-fr/ohada-financial-report-template",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0320a8c0e4a08b": {
+      "name": "navari-guide-0320a8c0e4a08b",
+      "route": "documentation/ohada-fr/value-columns",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0f9126052167d4": {
+      "name": "navari-guide-0f9126052167d4",
+      "route": "documentation/ohada-fr/custom-api-rows",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e5c2dd7f1a1d63": {
+      "name": "navari-guide-e5c2dd7f1a1d63",
+      "route": "documentation/ohada-fr/other-reports",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2709e5a083f0a6": {
+      "name": "navari-guide-2709e5a083f0a6",
+      "route": "documentation/frappoint",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-d2920cd1de2e9f": {
+      "name": "navari-guide-d2920cd1de2e9f",
+      "route": "documentation/frappoint/installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-fd01461629abef": {
+      "name": "navari-guide-fd01461629abef",
+      "route": "documentation/frappoint/settting-up",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9976f8a2af22b0": {
+      "name": "navari-guide-9976f8a2af22b0",
+      "route": "documentation/frappoint/service-appointment-videos",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-6743bf7653644d": {
+      "name": "navari-guide-6743bf7653644d",
+      "route": "documentation/frappoint/service-appointments",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c8360970f9b5df": {
+      "name": "navari-guide-c8360970f9b5df",
+      "route": "documentation/frappoint/service-unit-types",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-eebbec3bba5792": {
+      "name": "navari-guide-eebbec3bba5792",
+      "route": "documentation/frappoint/service-units",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a9ebc3ea2c40c2": {
+      "name": "navari-guide-a9ebc3ea2c40c2",
+      "route": "documentation/frappoint/service-types",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1eeb5bda2a775d": {
+      "name": "navari-guide-1eeb5bda2a775d",
+      "route": "documentation/frappoint/service-providers",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0132b2194c6117": {
+      "name": "navari-guide-0132b2194c6117",
+      "route": "documentation/frappoint/service-provider-availability",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c813acab433379": {
+      "name": "navari-guide-c813acab433379",
+      "route": "documentation/vuna-sourcing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-62e229bc8107fb": {
+      "name": "navari-guide-62e229bc8107fb",
+      "route": "documentation/vuna-sourcing/1-introduction/12-how-it-works",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5eee953259fa03": {
+      "name": "navari-guide-5eee953259fa03",
+      "route": "documentation/vuna-sourcing/2-getting-started/21-installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-21db9c8c5ab646": {
+      "name": "navari-guide-21db9c8c5ab646",
+      "route": "documentation/vuna-sourcing/2-getting-started/22-prerequisites",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-25e635c75ca8f2": {
+      "name": "navari-guide-25e635c75ca8f2",
+      "route": "documentation/vuna-sourcing/2-getting-started/23-sourcing-settings",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9e5056e01a3235": {
+      "name": "navari-guide-9e5056e01a3235",
+      "route": "documentation/vuna-sourcing/3-onboarding/31-completing-an-application",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2981c41f413e3b": {
+      "name": "navari-guide-2981c41f413e3b",
+      "route": "documentation/vuna-sourcing/3-onboarding/32-invitations-and-signups",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a7814b2b5da201": {
+      "name": "navari-guide-a7814b2b5da201",
+      "route": "documentation/vuna-sourcing/3-onboarding/33-onboarding-types",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-cd828c374d1bba": {
+      "name": "navari-guide-cd828c374d1bba",
+      "route": "documentation/vuna-sourcing/3-onboarding/34-reviewing-applications",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b8a2bbde452735": {
+      "name": "navari-guide-b8a2bbde452735",
+      "route": "documentation/vuna-sourcing/4-request-for-quotation/42-creating-an-rfq",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a2febb72a70d0e": {
+      "name": "navari-guide-a2febb72a70d0e",
+      "route": "documentation/vuna-sourcing/4-request-for-quotation/43-quoting-on-portal",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-966dcd335d440b": {
+      "name": "navari-guide-966dcd335d440b",
+      "route": "documentation/vuna-sourcing/4-request-for-quotation/44-open-bids",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-37dd9a337e4f68": {
+      "name": "navari-guide-37dd9a337e4f68",
+      "route": "documentation/vuna-sourcing/4-request-for-quotation/45-sealed-bids",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a6994833b2b106": {
+      "name": "navari-guide-a6994833b2b106",
+      "route": "documentation/vuna-sourcing/4-request-for-quotation/41-awarding-suppliers",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b34a50c2350b9a": {
+      "name": "navari-guide-b34a50c2350b9a",
+      "route": "documentation/vuna-sourcing/customer-transactions/confirming-portal-orders",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3f994f19390a5f": {
+      "name": "navari-guide-3f994f19390a5f",
+      "route": "documentation/vuna-sourcing/customer-transactions/52-placing-orders",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-766c9948374f54": {
+      "name": "navari-guide-766c9948374f54",
+      "route": "documentation/vuna-sourcing/6-portal-guide/61-customer-guide",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-7961a847cdd371": {
+      "name": "navari-guide-7961a847cdd371",
+      "route": "documentation/vuna-sourcing/6-portal-guide/62-supplier-guide",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-8224ce8ae1f4b8": {
+      "name": "navari-guide-8224ce8ae1f4b8",
+      "route": "documentation/vuna-sourcing/7-reference/71-trouble-shooting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-d04bc5435be664": {
+      "name": "navari-guide-d04bc5435be664",
+      "route": "documentation/livestock-management",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b9473d7c116f98": {
+      "name": "navari-guide-b9473d7c116f98",
+      "route": "documentation/livestock-management/1-getting-started/1-2-how-it-works",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ed4a8fee1979c9": {
+      "name": "navari-guide-ed4a8fee1979c9",
+      "route": "documentation/livestock-management/1-getting-started/1-3-key-concepts",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0b09ec4b1bd9ab": {
+      "name": "navari-guide-0b09ec4b1bd9ab",
+      "route": "documentation/livestock-management/1-getting-started/2-getting-started/2-1-requirements",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-dedf50554c41a2": {
+      "name": "navari-guide-dedf50554c41a2",
+      "route": "documentation/livestock-management/1-getting-started/2-getting-started/2-2-first-flock-walkthrough",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9aa30c47e8325e": {
+      "name": "navari-guide-9aa30c47e8325e",
+      "route": "documentation/livestock-management/3-setup-and-configuration/31-company-and-accounting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-6131f641f0add6": {
+      "name": "navari-guide-6131f641f0add6",
+      "route": "documentation/livestock-management/3-setup-and-configuration/32-warehouse-and-livestock-houses",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-4f6e5a58f7285a": {
+      "name": "navari-guide-4f6e5a58f7285a",
+      "route": "documentation/livestock-management/3-setup-and-configuration/33-items-and-units",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-cb1d95d46c8ffa": {
+      "name": "navari-guide-cb1d95d46c8ffa",
+      "route": "documentation/livestock-management/3-setup-and-configuration/34-batch-and-serial-numbers",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0d5041bb1babd8": {
+      "name": "navari-guide-0d5041bb1babd8",
+      "route": "documentation/livestock-management/3-setup-and-configuration/35-feed-formulas",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1d069c41f53831": {
+      "name": "navari-guide-1d069c41f53831",
+      "route": "documentation/livestock-management/3-setup-and-configuration/36-performance-profiles",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9628f22c5992c4": {
+      "name": "navari-guide-9628f22c5992c4",
+      "route": "documentation/livestock-management/farm-operations/41-receiving-livestock",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-164ab7d4e1bbaf": {
+      "name": "navari-guide-164ab7d4e1bbaf",
+      "route": "documentation/livestock-management/farm-operations/42-daily-farm-entry",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-63faa71572b9b6": {
+      "name": "navari-guide-63faa71572b9b6",
+      "route": "documentation/livestock-management/farm-operations/43-feeding",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-98fd4989b605fe": {
+      "name": "navari-guide-98fd4989b605fe",
+      "route": "documentation/livestock-management/farm-operations/44-mortality-and-culling",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b7264cc86e1f19": {
+      "name": "navari-guide-b7264cc86e1f19",
+      "route": "documentation/livestock-management/farm-operations/45-weighing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-22c3239da484e6": {
+      "name": "navari-guide-22c3239da484e6",
+      "route": "documentation/livestock-management/farm-operations/46-produce-collection",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-dfa1260126f8f3": {
+      "name": "navari-guide-dfa1260126f8f3",
+      "route": "documentation/livestock-management/farm-operations/47-husbandry-and-observations",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-efd43893a76357": {
+      "name": "navari-guide-efd43893a76357",
+      "route": "documentation/livestock-management/farm-operations/48-veterinary-care",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-697b5d778fc417": {
+      "name": "navari-guide-697b5d778fc417",
+      "route": "documentation/livestock-management/farm-operations/49-breeding-and-offspring",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-86572580acc4b3": {
+      "name": "navari-guide-86572580acc4b3",
+      "route": "documentation/livestock-management/farm-operations/410-transfers-and-dispatches",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e0f10cf46a5689": {
+      "name": "navari-guide-e0f10cf46a5689",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/51-workspace-dashboard",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-99fe46c7ddcd35": {
+      "name": "navari-guide-99fe46c7ddcd35",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/52-batch-performance-report",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e4caaa536f0953": {
+      "name": "navari-guide-e4caaa536f0953",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/53-performance-target-comparisons",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ed7e2221b2aa78": {
+      "name": "navari-guide-ed7e2221b2aa78",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/54-batch-lifecycle-traceability",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5d23ac7dd55baf": {
+      "name": "navari-guide-5d23ac7dd55baf",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/55-operational-reports",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b1b191cf742b12": {
+      "name": "navari-guide-b1b191cf742b12",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/56-survival-percentage",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ba8fadb71ff0d3": {
+      "name": "navari-guide-ba8fadb71ff0d3",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/57-number-cards",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-360b5a4fd3ed50": {
+      "name": "navari-guide-360b5a4fd3ed50",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/58-dashboard-charts",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-6e629f3573168e": {
+      "name": "navari-guide-6e629f3573168e",
+      "route": "documentation/livestock-management/50-reporting-and-monitoring/59-performance-alerts",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-82e35f10b4601b": {
+      "name": "navari-guide-82e35f10b4601b",
+      "route": "documentation/livestock-management/6-reference/61-calculations-and-definitions",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-45bd2720f14721": {
+      "name": "navari-guide-45bd2720f14721",
+      "route": "documentation/livestock-management/6-reference/62-document-statuses-and-cancellations",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9717a65e663ad3": {
+      "name": "navari-guide-9717a65e663ad3",
+      "route": "documentation/kenya-compliance-via-slade360-advantage",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e53381d854f287": {
+      "name": "navari-guide-e53381d854f287",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/getting-started/how-it-works",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5648e196c1f502": {
+      "name": "navari-guide-5648e196c1f502",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/getting-started/requirements",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-38918b531a791e": {
+      "name": "navari-guide-38918b531a791e",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/setup-configuration/installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-65ec02370a1c2e": {
+      "name": "navari-guide-65ec02370a1c2e",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/setup-configuration/upgrade-migration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3ae0426f3f4951": {
+      "name": "navari-guide-3ae0426f3f4951",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/setup-configuration/etims-configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2e623e01908634": {
+      "name": "navari-guide-2e623e01908634",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/core-workflows/items-customers",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-85d3af4d1b9595": {
+      "name": "navari-guide-85d3af4d1b9595",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/core-workflows/tax-codes-setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2c2e430bd45eb2": {
+      "name": "navari-guide-2c2e430bd45eb2",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/core-workflows/sales-workflow",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-dfbbdfb672a46d": {
+      "name": "navari-guide-dfbbdfb672a46d",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/processing-reporting/queue-processing-system",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-01e93300337254": {
+      "name": "navari-guide-01e93300337254",
+      "route": "documentation/kenya-compliance-via-slade360-advantage/processing-reporting/reports-overview",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-131d25765fe336": {
+      "name": "navari-guide-131d25765fe336",
+      "route": "documentation/nl-piece-rate-pay",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3dce4f50dedeea": {
+      "name": "navari-guide-3dce4f50dedeea",
+      "route": "documentation/nl-piece-rate-pay/set-up-installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-93f3504836d0e6": {
+      "name": "navari-guide-93f3504836d0e6",
+      "route": "documentation/nl-piece-rate-pay/usage-guide-workflow",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-7145b7151102d8": {
+      "name": "navari-guide-7145b7151102d8",
+      "route": "documentation/nl-piece-rate-pay/masters",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-79388021a885cf": {
+      "name": "navari-guide-79388021a885cf",
+      "route": "documentation/nl-piece-rate-pay/architecture-intergration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-48cb980075be91": {
+      "name": "navari-guide-48cb980075be91",
+      "route": "documentation/nl-piece-rate-pay/support-contribution",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2e550aa2b31ab3": {
+      "name": "navari-guide-2e550aa2b31ab3",
+      "route": "documentation/zambia-compliance-via-digitax",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-45ccd74081c407": {
+      "name": "navari-guide-45ccd74081c407",
+      "route": "documentation/zambia-compliance-via-digitax/introduction/installation-guide",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-25566529ea99cf": {
+      "name": "navari-guide-25566529ea99cf",
+      "route": "documentation/zambia-compliance-via-digitax/introduction/setting-up",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-38c364f180d1b8": {
+      "name": "navari-guide-38c364f180d1b8",
+      "route": "documentation/zambia-compliance-via-digitax/transactions/item-registration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-d8327cc50bb682": {
+      "name": "navari-guide-d8327cc50bb682",
+      "route": "documentation/zambia-compliance-via-digitax/transactions/sales-invoice",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2ad2b62127c60d": {
+      "name": "navari-guide-2ad2b62127c60d",
+      "route": "documentation/zambia-compliance-via-digitax/core-workflows/items-customers",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-fa676d088ebc12": {
+      "name": "navari-guide-fa676d088ebc12",
+      "route": "documentation/zambia-compliance-via-digitax/core-workflows/tax-codes-setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-d1c3ea1b67c4c8": {
+      "name": "navari-guide-d1c3ea1b67c4c8",
+      "route": "documentation/zambia-compliance-via-digitax/core-workflows/33-sales-workflow",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-7a8f6dd9c5045d": {
+      "name": "navari-guide-7a8f6dd9c5045d",
+      "route": "documentation/burundi-compliance",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-52167eac9eaf59": {
+      "name": "navari-guide-52167eac9eaf59",
+      "route": "documentation/burundi-compliance/getting-started/installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3a11d6732eae46": {
+      "name": "navari-guide-3a11d6732eae46",
+      "route": "documentation/burundi-compliance/getting-started/burundi-compliance-account",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-867a081fa33a8f": {
+      "name": "navari-guide-867a081fa33a8f",
+      "route": "documentation/burundi-compliance/configuration/setting-up/ebms-settings",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-40ea5d78213e03": {
+      "name": "navari-guide-40ea5d78213e03",
+      "route": "documentation/burundi-compliance/configuration/setting-up/endpoint-urls",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3ff9e4065c475d": {
+      "name": "navari-guide-3ff9e4065c475d",
+      "route": "documentation/burundi-compliance/configuration/setting-up/item",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b34f180b943dbc": {
+      "name": "navari-guide-b34f180b943dbc",
+      "route": "documentation/burundi-compliance/core-worfklows/sales-workflow",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-17be20c3975c1d": {
+      "name": "navari-guide-17be20c3975c1d",
+      "route": "documentation/burundi-compliance/core-worfklows/stock-movement-workflow",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2ae0bb20ebb7d4": {
+      "name": "navari-guide-2ae0bb20ebb7d4",
+      "route": "documentation/frappe-mpesa-payments",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3ac468a110066f": {
+      "name": "navari-guide-3ac468a110066f",
+      "route": "documentation/frappe-mpesa-payments/introduction/prerequisites",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ad88252e53dd8a": {
+      "name": "navari-guide-ad88252e53dd8a",
+      "route": "documentation/frappe-mpesa-payments/introduction/installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-0343aa17218df7": {
+      "name": "navari-guide-0343aa17218df7",
+      "route": "documentation/frappe-mpesa-payments/configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ae828b56528f39": {
+      "name": "navari-guide-ae828b56528f39",
+      "route": "documentation/frappe-mpesa-payments/payment-features/mpesa-express-stk-push",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c6b0fed6cf4e6d": {
+      "name": "navari-guide-c6b0fed6cf4e6d",
+      "route": "documentation/frappe-mpesa-payments/payment-features/c2b-payments",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f5648090d4d394": {
+      "name": "navari-guide-f5648090d4d394",
+      "route": "documentation/frappe-mpesa-payments/payment-features/b2c-disbursements",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-615a3302761319": {
+      "name": "navari-guide-615a3302761319",
+      "route": "documentation/frappe-mpesa-payments/payment-features/payment-reconciliation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-73e56fc98129cd": {
+      "name": "navari-guide-73e56fc98129cd",
+      "route": "documentation/frappe-mpesa-payments/payment-features/transaction-status-query",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-210691d7129bd5": {
+      "name": "navari-guide-210691d7129bd5",
+      "route": "documentation/frappe-mpesa-payments/reference/31-mpesa-settings",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-957e563b0c1f4b": {
+      "name": "navari-guide-957e563b0c1f4b",
+      "route": "documentation/frappe-mpesa-payments/reference/32-mpesa-c2b",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-86901d5c914b92": {
+      "name": "navari-guide-86901d5c914b92",
+      "route": "documentation/frappe-mpesa-payments/reference/33-public-key-certificate",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-69ba6feb98ab5f": {
+      "name": "navari-guide-69ba6feb98ab5f",
+      "route": "documentation/frappe-mpesa-payments/reference/b2c-payment-disbursment",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5243aca310fb0e": {
+      "name": "navari-guide-5243aca310fb0e",
+      "route": "documentation/frappe-mpesa-payments/reference/35-payment-reconciliation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f7d972fd3131cc": {
+      "name": "navari-guide-f7d972fd3131cc",
+      "route": "documentation/frappe-mpesa-payments/reference/36-payment-gateway",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ddaa8f4c80df77": {
+      "name": "navari-guide-ddaa8f4c80df77",
+      "route": "documentation/frappe-mpesa-payments/reference/security",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b5bc5613446395": {
+      "name": "navari-guide-b5bc5613446395",
+      "route": "documentation/frappe-mpesa-payments/reference/troubleshooting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-46f9462626d302": {
+      "name": "navari-guide-46f9462626d302",
+      "route": "documentation/tims-incotex",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-600d0e28616130": {
+      "name": "navari-guide-600d0e28616130",
+      "route": "documentation/tims-incotex/how-the-intergration-works",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9cb209f5bb203c": {
+      "name": "navari-guide-9cb209f5bb203c",
+      "route": "documentation/tims-incotex/architecture-technical-design",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-648a51287de470": {
+      "name": "navari-guide-648a51287de470",
+      "route": "documentation/tims-incotex/installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-df524d54d344b6": {
+      "name": "navari-guide-df524d54d344b6",
+      "route": "documentation/tims-incotex/obtaining-api-credentials",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2c345fc1609174": {
+      "name": "navari-guide-2c345fc1609174",
+      "route": "documentation/tims-incotex/configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-e86cbc40fdcecf": {
+      "name": "navari-guide-e86cbc40fdcecf",
+      "route": "documentation/tims-incotex/hs-code-configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-17f58f8c362809": {
+      "name": "navari-guide-17f58f8c362809",
+      "route": "documentation/tims-incotex/sales-invoice-flow",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-cb6f7409a7b42d": {
+      "name": "navari-guide-cb6f7409a7b42d",
+      "route": "documentation/tims-incotex/credit-note-handling",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-777616c139b924": {
+      "name": "navari-guide-777616c139b924",
+      "route": "documentation/tims-incotex/manual-re-submission",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9ac8c68a7b5a99": {
+      "name": "navari-guide-9ac8c68a7b5a99",
+      "route": "documentation/tims-incotex/background-scheduler",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-778c90f3a5a24e": {
+      "name": "navari-guide-778c90f3a5a24e",
+      "route": "documentation/tims-incotex/dashboard-monitoring",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f73a703a7bce03": {
+      "name": "navari-guide-f73a703a7bce03",
+      "route": "documentation/tims-incotex/print-format-qr-code",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-79e3da29cb9c38": {
+      "name": "navari-guide-79e3da29cb9c38",
+      "route": "documentation/tims-incotex/error-handling-failure-recovery",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1ac452fec067b8": {
+      "name": "navari-guide-1ac452fec067b8",
+      "route": "documentation/cams-biometric",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b440c2131469d0": {
+      "name": "navari-guide-b440c2131469d0",
+      "route": "documentation/cams-biometric/architecture-how-it-works",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-482064b655ab78": {
+      "name": "navari-guide-482064b655ab78",
+      "route": "documentation/cams-biometric/prerequisites-installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-63a8b601a9ffd5": {
+      "name": "navari-guide-63a8b601a9ffd5",
+      "route": "documentation/cams-biometric/cams-biometric-gateway-api",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9e63e1d9c75477": {
+      "name": "navari-guide-9e63e1d9c75477",
+      "route": "documentation/cams-biometric/configuration-guide",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-4b3099aa898d75": {
+      "name": "navari-guide-4b3099aa898d75",
+      "route": "documentation/cams-biometric/employee-setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-27c0c099ae8ae6": {
+      "name": "navari-guide-27c0c099ae8ae6",
+      "route": "documentation/cams-biometric/how-attendance-is-recorded",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-ba9606cd3a114e": {
+      "name": "navari-guide-ba9606cd3a114e",
+      "route": "documentation/cams-biometric/punch-types-log-types",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a9c0b4382e525d": {
+      "name": "navari-guide-a9c0b4382e525d",
+      "route": "documentation/cams-biometric/fetching-historical-punch-logs",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5d82a86a26d330": {
+      "name": "navari-guide-5d82a86a26d330",
+      "route": "documentation/cams-biometric/key-doctypes-reference-masters",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-681fd72d914884": {
+      "name": "navari-guide-681fd72d914884",
+      "route": "documentation/cams-biometric/api-endpoint-reference",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-6315a9632539c0": {
+      "name": "navari-guide-6315a9632539c0",
+      "route": "documentation/cams-biometric/timezone-handling",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b9080410af44b3": {
+      "name": "navari-guide-b9080410af44b3",
+      "route": "documentation/cams-biometric/permission-model-security",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f5936ccd6a486b": {
+      "name": "navari-guide-f5936ccd6a486b",
+      "route": "documentation/cams-biometric/logging-diagnostics",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-f5b2dd2fda7ab6": {
+      "name": "navari-guide-f5b2dd2fda7ab6",
+      "route": "documentation/cams-biometric/testing-the-integration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2a4aee704ad41b": {
+      "name": "navari-guide-2a4aee704ad41b",
+      "route": "documentation/cams-biometric/troubleshooting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-8722fa55f3725a": {
+      "name": "navari-guide-8722fa55f3725a",
+      "route": "documentation/cams-biometric/development-guide",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-55a8148b9adbbb": {
+      "name": "navari-guide-55a8148b9adbbb",
+      "route": "documentation/cams-biometric/contributing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9030680ef04ef1": {
+      "name": "navari-guide-9030680ef04ef1",
+      "route": "documentation/cams-biometric/support-contact",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-af9caedba17dc3": {
+      "name": "navari-guide-af9caedba17dc3",
+      "route": "documentation/zkteco",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-46192f59afdcbb": {
+      "name": "navari-guide-46192f59afdcbb",
+      "route": "documentation/zkteco/architecture-and-how-it-works",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-37ad94d3ce394d": {
+      "name": "navari-guide-37ad94d3ce394d",
+      "route": "documentation/zkteco/prerequisites",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-05d8cb47f08e92": {
+      "name": "navari-guide-05d8cb47f08e92",
+      "route": "documentation/zkteco/50-configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-093ffa5cf99dab": {
+      "name": "navari-guide-093ffa5cf99dab",
+      "route": "documentation/zkteco/60-synchronization-process",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-26c980cb646d72": {
+      "name": "navari-guide-26c980cb646d72",
+      "route": "documentation/zkteco/61-user-status-management",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-4a80a3ea47c26e": {
+      "name": "navari-guide-4a80a3ea47c26e",
+      "route": "documentation/zkteco/62-monitoring-and-audit",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2c8a0feaf719a7": {
+      "name": "navari-guide-2c8a0feaf719a7",
+      "route": "documentation/zkteco/63-troubleshooting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-11addb79b3fc6b": {
+      "name": "navari-guide-11addb79b3fc6b",
+      "route": "documentation/zkteco/64-contributing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-52e0b9e051f6ca": {
+      "name": "navari-guide-52e0b9e051f6ca",
+      "route": "documentation/tims-tevin",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c200ddd29d43fd": {
+      "name": "navari-guide-c200ddd29d43fd",
+      "route": "documentation/tims-tevin/how-it-works-architecture",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-396155e8b2c894": {
+      "name": "navari-guide-396155e8b2c894",
+      "route": "documentation/tims-tevin/requirements-configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-b0ba3f2201d278": {
+      "name": "navari-guide-b0ba3f2201d278",
+      "route": "documentation/tims-tevin/configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-5df9a6fe9930ad": {
+      "name": "navari-guide-5df9a6fe9930ad",
+      "route": "documentation/tims-tevin/invoice-submission-workflow/sales-invoices",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-4295c21c217bd2": {
+      "name": "navari-guide-4295c21c217bd2",
+      "route": "documentation/tims-tevin/intergration-request-tracking",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-04aa132377449e": {
+      "name": "navari-guide-04aa132377449e",
+      "route": "documentation/tims-tevin/print-format-intergration-request-compliance",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-00cb49bcdc732c": {
+      "name": "navari-guide-00cb49bcdc732c",
+      "route": "documentation/tims-tevin/error-handling-submission",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1022b7205d6307": {
+      "name": "navari-guide-1022b7205d6307",
+      "route": "documentation/tims-tevin/scheduled-tasks",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-302506d8f0195c": {
+      "name": "navari-guide-302506d8f0195c",
+      "route": "documentation/tims-tevin/trouble-shooting-guides",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-9135e345389dfb": {
+      "name": "navari-guide-9135e345389dfb",
+      "route": "documentation/tims-tevin/security-data-considerations",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-81f24951a3d2e7": {
+      "name": "navari-guide-81f24951a3d2e7",
+      "route": "documentation/tims-tevin/compliance-context-kenya-tims-regulations",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-1d3e08fdc524e4": {
+      "name": "navari-guide-1d3e08fdc524e4",
+      "route": "documentation/tims-tevin/support-resources-and-licence",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-6bac047839fb40": {
+      "name": "navari-guide-6bac047839fb40",
+      "route": "documentation/suprema-biostar",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-495f328bc4cffc": {
+      "name": "navari-guide-495f328bc4cffc",
+      "route": "documentation/suprema-biostar/prerequisites-installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c2a85cb05584ed": {
+      "name": "navari-guide-c2a85cb05584ed",
+      "route": "documentation/suprema-biostar/configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-2c20048b62e97a": {
+      "name": "navari-guide-2c20048b62e97a",
+      "route": "documentation/suprema-biostar/troubleshooting",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-dfbca83169f6cd": {
+      "name": "navari-guide-dfbca83169f6cd",
+      "route": "documentation/suprema-biostar/contributing",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-d9de2bad27de6d": {
+      "name": "navari-guide-d9de2bad27de6d",
+      "route": "documentation/nigeria-compliance",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-c88e8f3ad9c5ba": {
+      "name": "navari-guide-c88e8f3ad9c5ba",
+      "route": "documentation/nigeria-compliance/setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-49614d42cbc6c3": {
+      "name": "navari-guide-49614d42cbc6c3",
+      "route": "documentation/nigeria-compliance/introduction/13-requirements",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-cfccec3a7eebe0": {
+      "name": "navari-guide-cfccec3a7eebe0",
+      "route": "documentation/nigeria-compliance/2-setup-configurations/21-installation",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-a4126be1481bee": {
+      "name": "navari-guide-a4126be1481bee",
+      "route": "documentation/nigeria-compliance/2-setup-configurations/22-configuration",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-15451b8bd1feab": {
+      "name": "navari-guide-15451b8bd1feab",
+      "route": "documentation/nigeria-compliance/3-core-workflows/31-item",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-67ace3df815060": {
+      "name": "navari-guide-67ace3df815060",
+      "route": "documentation/nigeria-compliance/3-core-workflows/customer-setup",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-cd3017d2ba9476": {
+      "name": "navari-guide-cd3017d2ba9476",
+      "route": "documentation/nigeria-compliance/3-core-workflows/33-sales-invoices-and-payment",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
+    },
+    "guide-3d1cad10720e24": {
+      "name": "navari-guide-3d1cad10720e24",
+      "route": "documentation/vuna_transport",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Application Guide Reading"
+      ]
     }
   },
   "scripts": [
@@ -143,6 +2403,7 @@
     "Navari Website Motion",
     "Navari Stories Archive",
     "Navari Article Reading",
-    "Navari Documentation Discovery"
+    "Navari Documentation Discovery",
+    "Navari Application Guide Reading"
   ]
 }

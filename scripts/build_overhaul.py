@@ -11,7 +11,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from story_archive import render_archive, render_story_cards, load_stories
 from article_pages import render_article
-from documentation_page import render_documentation
+from documentation_page import render_documentation, load_documentation
+from guide_pages import load_guides, guide_label, render_guide
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'website'
@@ -92,7 +93,7 @@ class Blocks(HTMLParser):
   # Empty HTML boolean attributes must remain true through Builder rendering.
   b['attributes']={k:(k if v is None else v) for k,v in attrs.items()}
   self.stack[-1]['children'].append(b)
-  if tag not in {'img','input','br','hr','meta','link'}:self.stack.append(b)
+  if tag not in {'img','input','br','hr','meta','link','source'}:self.stack.append(b)
  def handle_endtag(self,tag):
   if len(self.stack)>1 and self.stack[-1]['element']==tag:self.stack.pop()
  def handle_data(self,data):
@@ -101,7 +102,10 @@ class Blocks(HTMLParser):
     self.stack[-1]['innerHTML']=self.stack[-1].get('innerHTML','')+html.escape(data)
     return
    # Text spans preserve mixed-content order alongside inline children.
-   self.counter+=1;self.stack[-1]['children'].append({'blockId':f'navari-v2-{self.counter}','element':'span','blockName':'text','baseStyles':{},'innerHTML':html.escape(data)})
+   literal=html.escape(data)
+   # Technical examples contain Jinja syntax; Builder must display it as text.
+   literal=re.sub(r'\{\{|\{%|\{#',lambda match:'{{ '+json.dumps(match[0])+' }}',literal)
+   self.counter+=1;self.stack[-1]['children'].append({'blockId':f'navari-v2-{self.counter}','element':'span','blockName':'text','baseStyles':{},'innerHTML':literal})
  def handle_entityref(self,name):self.handle_data(html.unescape('&'+name+';'))
 
 def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
@@ -109,14 +113,21 @@ def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False
 def page_blocks(content):
  content += '<button class="back-to-top" type="button" data-back-to-top aria-label="Back to top" title="Back to top" hidden><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></button>'
  records = {record['url'].rstrip('/'): '/' + record['slug'] for record in load_stories()}
+ guide_urls={record['source'].rstrip('/'): '/'+record['route'] for record in load_guides()['pages']}
+ for app in load_documentation():
+  for source_url in [app['url'],app['start_url']]:guide_urls[source_url.rstrip('/')]= '/documentation/'+app['id']
  def links(match):
   attrs = match.group(1)
   href = re.search(r'href="([^"]+)"', attrs).group(1)
   if href.rstrip('/')=='https://docs.navari.co.ke':
    return '<a'+attrs.replace('href="'+href+'"','href="/documentation"')+'>'
+  if 'data-guide-source' not in attrs and href.rstrip('/') in guide_urls:
+   attrs=re.sub(r'\s+(?:target|rel|title)="[^"]*"','',attrs)
+   return '<a'+attrs.replace('href="'+href+'"','href="'+guide_urls[href.rstrip('/')]+ '"')+'>'
   if 'data-original-publication' not in attrs and href.rstrip('/') in records:
    attrs = attrs.replace('href="'+href+'"', 'href="'+records[href.rstrip('/')]+'"')
    return '<a'+attrs+'>'
+  attrs=re.sub(r'\s+(?:target|rel|title)="[^"]*"','',attrs)
   return '<a'+attrs+' target="_blank" rel="noopener noreferrer" title="Opens in a new tab">'
  content=re.sub(r'<a\b([^>]*\bhref="https?://[^"]+"[^>]*)>', links, content)
  parser=Blocks();parser.feed('<div class="navari-site">'+content+'</div>')
@@ -124,7 +135,7 @@ def page_blocks(content):
 
 def main():
  manifest=json.loads((ROOT/'migration/manifest.json').read_text())
- scripts=[{'name':'Navari Website v2 Styles','script_type':'CSS','script':(SOURCE/'site.css').read_text()},{'name':'Navari Website v2 Interactions','script_type':'JavaScript','script':(SOURCE/'site.js').read_text()},{'name':'Navari Website Motion','script_type':'JavaScript','script':(SOURCE/'motion.js').read_text()},{'name':'Navari Stories Archive','script_type':'JavaScript','script':(SOURCE/'stories.js').read_text()},{'name':'Navari Article Reading','script_type':'JavaScript','script':(SOURCE/'article.js').read_text()},{'name':'Navari Documentation Discovery','script_type':'JavaScript','script':(SOURCE/'documentation.js').read_text()}]
+ scripts=[{'name':'Navari Website v2 Styles','script_type':'CSS','script':(SOURCE/'site.css').read_text()},{'name':'Navari Website v2 Interactions','script_type':'JavaScript','script':(SOURCE/'site.js').read_text()},{'name':'Navari Website Motion','script_type':'JavaScript','script':(SOURCE/'motion.js').read_text()},{'name':'Navari Stories Archive','script_type':'JavaScript','script':(SOURCE/'stories.js').read_text()},{'name':'Navari Article Reading','script_type':'JavaScript','script':(SOURCE/'article.js').read_text()},{'name':'Navari Documentation Discovery','script_type':'JavaScript','script':(SOURCE/'documentation.js').read_text()},{'name':'Navari Application Guide Reading','script_type':'JavaScript','script':(SOURCE/'guide.js').read_text()}]
  write(ROOT/'migration/scripts/client_scripts.json',scripts)
  metadata={'documentation':('Documentation & Guides | Navari Limited','Find documentation for Navari apps, payments, compliance and integrations. Search the application guides and discover your next step.'),'home':('ERPNext & Frappe Solutions in Kenya | Navari Limited','Open-source business software with local expertise. Explore ERPNext, Frappe and Navari integrations for your business in Kenya and Africa.'),'services':('ERPNext Modules & Frappe Apps | Navari Solutions','Explore business software for finance, HR, CRM, manufacturing and more. Discover ERPNext modules, Frappe apps and local Navari integrations.'),'about':('About Navari | Your ERPNext Partner in Africa','Meet Navari Limited, Kenya’s first ERPNext Frappe Partner. ERP consultancy, implementation, customization and support from Nairobi.'),'stories':('Stories, Experiences & Insights | Navari Limited','Explore the Navari story archive: customer journeys, open-source perspectives and company news. Search articles and discover stories from across Africa.'),'contacts':('Talk to an ERP Specialist | Navari Limited','Discuss ERPNext, Frappe and your business requirements with Navari in Nairobi. Request a consultation or contact the team directly.')}
  for label,render in [('home',home),('services',services),('about',about),('stories',resources),('contacts',contacts),('documentation',lambda:render_documentation(icon))]:
@@ -165,6 +176,23 @@ def main():
   write(ROOT/f'migration/pages/{label}-cloud-create.json',create)
   (SOURCE/'articles'/f"{story['slug']}.html").write_text(content+'\n')
   manifest['pages'][label]={'name':page['name'],'route':page['route'],'scripts':[s['name'] for s in article_scripts]}
+ # Application guides are native, editable pages with static source content.
+ guide_scripts=scripts[:3]+[scripts[6]]
+ guide_snapshot=load_guides();guides=guide_snapshot['pages'];apps=load_documentation()
+ for label in list(manifest['pages']):
+  if label.startswith('guide-'):del manifest['pages'][label]
+ for generated in (ROOT/'migration/pages').glob('guide-*.json'):generated.unlink()
+ for generated in (SOURCE/'guides').glob('guide-*.html'):generated.unlink()
+ (SOURCE/'guides').mkdir(exist_ok=True)
+ for guide in guides:
+  label=guide_label(guide)
+  content=nav()+'<main id="main" tabindex="-1">'+render_guide(guide,apps,guides,icon,guide_snapshot['captured_on'])+'</main>'+footer()
+  content,blocks=page_blocks(content)
+  page={'doctype':'Builder Page','name':'navari-'+label,'page_name':'navari-'+label,'route':guide['route'],'published':1,'staging':0,'is_standard':0,'is_template':0,'dynamic_route':0,'authenticated_access':0,'disable_indexing':0,'blocks':blocks,'draft_blocks':blocks,'head_html':'','body_html':'','page_data_script':'','page_title':guide['title']+' | Navari Documentation','meta_description':'Read '+guide['title']+' in the Navari application field guide.','canonical_url':guide['source'],'language':'fr' if guide['app']=='ohada-fr' else 'en','client_scripts':[{'builder_script':s['name']} for s in guide_scripts]}
+  write(ROOT/f'migration/pages/{label}.json',page)
+  write(ROOT/f'migration/pages/{label}-cloud-create.json',{key:value for key,value in page.items() if key not in {'name','draft_blocks'}})
+  (SOURCE/'guides'/f'{label}.html').write_text(content+'\n')
+  manifest['pages'][label]={'name':page['name'],'route':guide['route'],'scripts':[s['name'] for s in guide_scripts]}
  manifest['scripts']=[s['name'] for s in scripts];write(ROOT/'migration/manifest.json',manifest)
  print(f"Built {len(manifest['pages'])} Builder pages, synchronized cloud payloads and homepage exports.")
 

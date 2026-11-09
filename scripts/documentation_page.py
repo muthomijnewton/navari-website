@@ -24,9 +24,9 @@ def render_documentation(icon):
     topics=''.join(f'<button type="button" data-doc-topic="{topic}" aria-pressed="false" aria-controls="docs-grid"><span>{e(label)}</span><span>{counts[topic]:02}</span></button>' for topic,label in TOPICS)
     cards=''
     for app in apps:
-        destination=app['start_url'] if app.get('available',True) else '/contacts'
-        link_label='Open the guide' if app.get('available',True) else 'Ask about this guide'
-        icon_label='Open '+app['name']+' documentation (opens in a new tab)' if app.get('available',True) else 'Ask Navari about '+app['name']+' documentation'
+        destination='/documentation/'+app['id']
+        link_label='Open the guide' if app.get('available',True) else 'View guide status'
+        icon_label='Open '+app['name']+' documentation' if app.get('available',True) else 'View '+app['name']+' documentation status'
         unavailable='' if app.get('available',True) else '<span class="docs-unavailable">Guide unavailable</span>'
         search=' '.join([app['name'],app['description'],app['category'],app['topic'],'M-Pesa MPesa' if app['id']=='frappe-mpesa-payments' else ''])
         cards+=(f'<article class="docs-card" data-doc-card data-topic="{app["topic"]}" data-name="{e(app["name"])}" data-search="{e(search)}" style="--doc-tone:{app["tone"]};--doc-color:{app["color"]}">'

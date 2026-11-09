@@ -63,7 +63,7 @@
       '.hero-footnote','.ribbon-item','.workspace',
       '.page-hero .eyebrow','.page-hero h1','.page-hero .intro',
       '.section-top','.section > .wrap > h2','.section > .wrap > .eyebrow',
-      '.docs-card','.docs-library-heading','.docs-closing-inner','.featured-story','.archive-top','.app-card','.trust-item','.pillar','.step','.story-card','.feature',
+      '.guide-app-mark','.guide-hero h1','.guide-neighbours a','.guide-human','.docs-card','.docs-library-heading','.docs-closing-inner','.featured-story','.archive-top','.app-card','.trust-item','.pillar','.step','.story-card','.feature',
       '.split > div','.contact-info','.consultation','.cta-inner > div','.faq details'
     ].join(',');
     // A quiet pool of light follows the pointer on spacious hero panels.
