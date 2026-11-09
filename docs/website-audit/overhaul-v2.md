@@ -154,3 +154,42 @@ no-result recovery, direct page/category URLs, internal archive action and the
 script-free fallback. The Stories layout passed 320, 768 and 1440px overflow checks.
 The installed native Builder renderer and registered Jinja filters also rendered
 the new archive successfully, with working filtering in its generated HTML.
+
+## Native article pages — 9 November 2026
+
+Eight article pages now use the shared editorial theme at the original root-level
+slugs. Homepage cards, archive cards, featured articles and the award call to action
+open these native pages. External links explicitly marked as original publications
+retain their source destinations.
+
+The new pages include breadcrumbs, publication metadata, original artwork,
+concise editorial overviews, a contents index, section tracking, reading progress,
+copy-link feedback, neighbouring articles and related stories. The overviews are
+labelled as such; they are not presented as the full original articles or direct
+quotations. Source publications remain linked for complete context. Historic
+statistics were not republished as current company claims.
+
+The Ciira Agrovet and Amotech pages retain access to their full original PDF
+presentations (12 and 10 pages respectively). Both were checked against their
+source documents. The partnership webinar retains its original YouTube video
+(`Os3bC13DiWA`) through a click-to-load privacy-enhanced player. PDFs and video
+players are not loaded until requested; direct source links remain available
+without scripts. No documents or external media were altered.
+
+Sources are `website/articles.json`, `scripts/article_pages.py` and
+`website/article.js`. Article cloud-create payloads include deterministic
+`page_name` values (`navari-story-<id>`) and the original slugs. Import the new
+reading-tools client script before creating article documents. There are now
+13 native pages, 29 total export files and five client scripts; only the article
+pages attach the reading-tools script. Preview generation now follows the
+manifest rather than a fixed list of five routes.
+
+Verified: all eight articles at 320, 768 and 1440px without horizontal overflow;
+archive-to-article navigation; contents anchors and progress tracking; direct
+PDF links and the inline reader; webinar iframe creation; script-free content;
+and native Builder/Jinja rendering for all eight article exports. Full external
+media availability continues to depend on the original hosting services.
+
+A motion interaction found during QA was fixed: pointer focus no longer cancels
+an entrance transform between mouse-down and mouse-up, preventing interrupted
+link clicks. Keyboard focus still settles an active entrance.

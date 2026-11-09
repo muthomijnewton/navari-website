@@ -100,6 +100,8 @@
     });
     // Keyboard focus and hidden tabs immediately settle ongoing motion.
     document.addEventListener('focusin', event => {
+      // Pointer focus must not move a link between mouse-down and mouse-up.
+      if (!event.target.matches(':focus-visible')) return;
       active.forEach(animation => {
         if (animation.effect?.target?.contains(event.target)) animation.cancel();
       });

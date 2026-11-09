@@ -54,7 +54,8 @@ def main():
         if image.is_file():
             shutil.copyfile(image, OUT / 'files' / image.name)
     scripts = {s['name']: s for s in json.loads((ROOT / 'migration/scripts/client_scripts.json').read_text())}
-    for name in ['home', 'about', 'services', 'stories', 'contacts']:
+    manifest = json.loads((ROOT / 'migration/manifest.json').read_text())
+    for name in manifest['pages']:
         page = json.loads((ROOT / f'migration/pages/{name}.json').read_text())
         rules = []
         body = ''.join(render(b, rules) for b in json.loads(page['blocks']))
@@ -62,8 +63,8 @@ def main():
         css = '\n'.join(rules + [s['script'] for s in selected if s['script_type'] == 'CSS'])
         js = ''.join('<script>' + s['script'] + '</script>' for s in selected if s['script_type'] == 'JavaScript')
         doc = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(page["page_title"])}</title><meta name="description" content="{html.escape(page.get('meta_description', ''), quote=True)}">{page.get("head_html", "")}<style>{css}</style></head><body>{body}{js}</body></html>'
-        folder = OUT / name
-        folder.mkdir(exist_ok=True)
+        folder = OUT / page['route'].strip('/')
+        folder.mkdir(parents=True, exist_ok=True)
         (folder / 'index.html').write_text(doc)
         if name == 'home':
             (OUT / 'index.html').write_text(doc)

@@ -45,12 +45,93 @@
         "Navari Website v2 Interactions",
         "Navari Website Motion"
       ]
+    },
+    "article-2992": {
+      "name": "navari-story-2992",
+      "route": "frappe-partner-awards-2026",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-2771": {
+      "name": "navari-story-2771",
+      "route": "how-muchai-gateru-built-navari-on-grounded-roots-values",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-2516": {
+      "name": "navari-story-2516",
+      "route": "choosing-the-best-erp-system-in-east-africa-why-erpnext-stands-out",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-2514": {
+      "name": "navari-story-2514",
+      "route": "why-erpnext-is-transforming-businesses-in-africa",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-2275": {
+      "name": "navari-story-2275",
+      "route": "transforming-distribution-with-frappes-erpnext-from-chaos-to-clarity",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-2257": {
+      "name": "navari-story-2257",
+      "route": "choosing-erpnext-over-sap-and-others-and-our-experience-thus-far",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-1852": {
+      "name": "navari-story-1852",
+      "route": "navari-limited-shares-why-frappe-partnership-is-important-to-any-erpnext-reseller",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
+    },
+    "article-254": {
+      "name": "navari-story-254",
+      "route": "alone-we-can-do-so-little-together-we-can-do-so-much",
+      "scripts": [
+        "Navari Website v2 Styles",
+        "Navari Website v2 Interactions",
+        "Navari Website Motion",
+        "Navari Article Reading"
+      ]
     }
   },
   "scripts": [
     "Navari Website v2 Styles",
     "Navari Website v2 Interactions",
     "Navari Website Motion",
-    "Navari Stories Archive"
+    "Navari Stories Archive",
+    "Navari Article Reading"
   ]
 }

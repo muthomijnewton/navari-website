@@ -9,7 +9,8 @@ import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
-from story_archive import render_archive, render_story_cards
+from story_archive import render_archive, render_story_cards, load_stories
+from article_pages import render_article
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'website'
@@ -100,18 +101,31 @@ class Blocks(HTMLParser):
  def handle_entityref(self,name):self.handle_data(html.unescape('&'+name+';'))
 
 def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
+
+def page_blocks(content):
+ records = {record['url'].rstrip('/'): '/' + record['slug'] for record in load_stories()}
+ def links(match):
+  attrs = match.group(1)
+  href = re.search(r'href="([^"]+)"', attrs).group(1)
+  if 'data-original-publication' not in attrs and href.rstrip('/') in records:
+   attrs = attrs.replace('href="'+href+'"', 'href="'+records[href.rstrip('/')]+'"')
+   return '<a'+attrs+'>'
+  return '<a'+attrs+' target="_blank" rel="noopener noreferrer" title="Opens in a new tab">'
+ content=re.sub(r'<a\b([^>]*\bhref="https?://[^"]+"[^>]*)>', links, content)
+ parser=Blocks();parser.feed('<div class="navari-site">'+content+'</div>')
+ return content, json.dumps(parser.root['children'],separators=(',',':'),ensure_ascii=False)
+
 def main():
  manifest=json.loads((ROOT/'migration/manifest.json').read_text())
- scripts=[{'name':'Navari Website v2 Styles','script_type':'CSS','script':(SOURCE/'site.css').read_text()},{'name':'Navari Website v2 Interactions','script_type':'JavaScript','script':(SOURCE/'site.js').read_text()},{'name':'Navari Website Motion','script_type':'JavaScript','script':(SOURCE/'motion.js').read_text()},{'name':'Navari Stories Archive','script_type':'JavaScript','script':(SOURCE/'stories.js').read_text()}]
+ scripts=[{'name':'Navari Website v2 Styles','script_type':'CSS','script':(SOURCE/'site.css').read_text()},{'name':'Navari Website v2 Interactions','script_type':'JavaScript','script':(SOURCE/'site.js').read_text()},{'name':'Navari Website Motion','script_type':'JavaScript','script':(SOURCE/'motion.js').read_text()},{'name':'Navari Stories Archive','script_type':'JavaScript','script':(SOURCE/'stories.js').read_text()},{'name':'Navari Article Reading','script_type':'JavaScript','script':(SOURCE/'article.js').read_text()}]
  write(ROOT/'migration/scripts/client_scripts.json',scripts)
  metadata={'home':('ERPNext & Frappe Solutions in Kenya | Navari Limited','Open-source business software with local expertise. Explore ERPNext, Frappe and Navari integrations for your business in Kenya and Africa.'),'services':('ERPNext Modules & Frappe Apps | Navari Solutions','Explore business software for finance, HR, CRM, manufacturing and more. Discover ERPNext modules, Frappe apps and local Navari integrations.'),'about':('About Navari | Your ERPNext Partner in Africa','Meet Navari Limited, Kenya’s first ERPNext Frappe Partner. ERP consultancy, implementation, customization and support from Nairobi.'),'stories':('Stories, Experiences & Insights | Navari Limited','Explore the Navari story archive: customer journeys, open-source perspectives and company news. Search articles and discover stories from across Africa.'),'contacts':('Talk to an ERP Specialist | Navari Limited','Discuss ERPNext, Frappe and your business requirements with Navari in Nairobi. Request a consultation or contact the team directly.')}
  for label,render in [('home',home),('services',services),('about',about),('stories',resources),('contacts',contacts)]:
-  page_scripts=scripts if label=='stories' else scripts[:3]
+  page_scripts=scripts[:4] if label=='stories' else scripts[:3]
   page_path=ROOT/f'migration/pages/{label}.json';page=json.loads(page_path.read_text())
   content=nav()+'<main id="main" tabindex="-1">'+render()+'</main>'+footer()
-  content=re.sub(r'<a\b([^>]*\bhref="https?://[^"]+"[^>]*)>', r'<a\1 target="_blank" rel="noopener noreferrer" title="Opens in a new tab">', content)
-  parser=Blocks();parser.feed('<div class="navari-site">'+content+'</div>');blocks=parser.root['children']
-  page.update(blocks=json.dumps(blocks,separators=(',',':'),ensure_ascii=False),head_html='',page_data_script='',page_title=metadata[label][0],meta_description=metadata[label][1],language='en',client_scripts=[{'builder_script':s['name']} for s in page_scripts])
+  content, blocks=page_blocks(content)
+  page.update(blocks=blocks,head_html='',page_data_script='',page_title=metadata[label][0],meta_description=metadata[label][1],language='en',client_scripts=[{'builder_script':s['name']} for s in page_scripts])
   page['draft_blocks']=page['blocks'];write(page_path,page)
   # Source HTML is an inspectable design artefact; JSON stays the deployment format.
   (SOURCE/f'{label}.html').write_text(content+'\n')
@@ -126,7 +140,22 @@ def main():
     for key in ['blocks','draft_blocks','head_html','page_data_script','page_title','meta_description','client_scripts']:data[key]=page[key]
     write(variant,data)
   manifest['pages'][label]['scripts']=[s['name'] for s in page_scripts]
+ # Article routes retain the original published slugs for link compatibility.
+ article_scripts=scripts[:3]+[scripts[4]]
+ (SOURCE/'articles').mkdir(exist_ok=True)
+ for story in load_stories():
+  label='article-'+story['id']
+  page_path=ROOT/f'migration/pages/{label}.json'
+  page=json.loads(page_path.read_text()) if page_path.exists() else {'doctype':'Builder Page','name':'navari-story-'+story['id'],'page_name':'navari-story-'+story['id'],'published':1,'staging':0,'is_standard':0,'is_template':0,'dynamic_route':0,'authenticated_access':0,'disable_indexing':0}
+  content=nav()+'<main id="main" tabindex="-1">'+render_article(story)+'</main>'+footer()
+  content,blocks=page_blocks(content)
+  page.update(route=story['slug'],blocks=blocks,draft_blocks=blocks,head_html='',body_html='',page_data_script='',page_title=story['title']+' | Navari Journal',meta_description=story['excerpt'],canonical_url=story['url'],language='en',client_scripts=[{'builder_script':s['name']} for s in article_scripts])
+  write(page_path,page)
+  create={key:value for key,value in page.items() if key not in {'name','draft_blocks'}}
+  write(ROOT/f'migration/pages/{label}-cloud-create.json',create)
+  (SOURCE/'articles'/f"{story['slug']}.html").write_text(content+'\n')
+  manifest['pages'][label]={'name':page['name'],'route':page['route'],'scripts':[s['name'] for s in article_scripts]}
  manifest['scripts']=[s['name'] for s in scripts];write(ROOT/'migration/manifest.json',manifest)
- print('Built five Builder pages, synchronized cloud payloads and homepage exports.')
+ print(f"Built {len(manifest['pages'])} Builder pages, synchronized cloud payloads and homepage exports.")
 
 if __name__=='__main__':main()

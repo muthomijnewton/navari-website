@@ -26,15 +26,19 @@ def image(story, featured=False):
     return f'<img src="{e(story["image"])}" alt="{e(story["image_alt"])}" width="{story["image_width"]}" height="{story["image_height"]}" {priority} decoding="async">'
 
 
+def article_url(story):
+    return '/' + story['slug']
+
+
 def card(story):
     search = ' '.join([story['title'], story['short_title'], story['excerpt'], CATEGORIES[story['category']]])
     return (
         f'<article class="story-card archive-card" data-story="{e(story["category"])}" data-search="{e(search)}" id="story-{story["id"]}">'
-        f'<a class="story-image" href="{e(story["url"])}" aria-label="Read {e(story["title"])} (opens in a new tab)">{image(story)}</a>'
+        f'<a class="story-image" href="{e(article_url(story))}" aria-label="Read {e(story["title"])}">{image(story)}</a>'
         '<div class="story-content">'
         f'<div class="story-meta"><span class="story-category">{e(CATEGORIES[story["category"]])}</span><time datetime="{story["date"]}">{story_date(story)}</time></div>'
-        f'<h3><a href="{e(story["url"])}">{e(story["title"])}</a></h3>'
-        f'<p>{e(story["excerpt"])}</p><a class="text-link" href="{e(story["url"])}">Read the story <span aria-hidden="true">↗</span></a>'
+        f'<h3><a href="{e(article_url(story))}">{e(story["title"])}</a></h3>'
+        f'<p>{e(story["excerpt"])}</p><a class="text-link" href="{e(article_url(story))}">Read the story <span aria-hidden="true">↗</span></a>'
         '</div></article>'
     )
 
@@ -59,12 +63,12 @@ def render_archive():
         '<a class="text-link" href="#archive">Browse the full Navari archive <span aria-hidden="true">↓</span></a></div></div></div></section>'
         '<section class="section featured-section"><div class="wrap">'
         '<article class="featured-story">'
-        f'<a class="featured-image" href="{e(featured["url"])}" aria-label="Read {e(featured["title"])} (opens in a new tab)">{image(featured, True)}<span class="featured-label">Featured story</span></a>'
+        f'<a class="featured-image" href="{e(article_url(featured))}" aria-label="Read {e(featured["title"])}">{image(featured, True)}<span class="featured-label">Featured story</span></a>'
         '<div class="featured-content"><p class="eyebrow">A shared milestone</p>'
         f'<div class="story-meta"><span class="story-category">{e(CATEGORIES[featured["category"]])}</span><time datetime="{featured["date"]}">{story_date(featured)}</time></div>'
         '<h2>Frappe Partner<br><span class="serif">Awards 2026.</span></h2>'
         '<p>Recognition for partnerships in Africa. A moment to celebrate the clients, team and community behind the work.</p>'
-        f'<a class="btn" href="{e(featured["url"])}">Read the story <span aria-hidden="true">↗</span></a>'
+        f'<a class="btn" href="{e(article_url(featured))}">Read the story <span aria-hidden="true">↗</span></a>'
         '</div></article></div></section>'
         '<section class="section archive-section" id="archive" data-story-archive>'
         '<div class="wrap"><div class="archive-top"><div><p class="eyebrow">Explore the collection</p><h2 id="archive-heading" tabindex="-1">The full <span class="serif">archive.</span></h2></div>'
