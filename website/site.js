@@ -9,11 +9,19 @@
         const visible = scrollY > 480;
         if (!visible && document.activeElement === toTop) document.querySelector('.header .brand')?.focus({preventScroll:true});
         toTop.hidden = !visible;
+        const range = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+        toTop.style.setProperty('--top-progress', `${Math.round(Math.min(1, scrollY / range) * 360)}deg`);
+        if (!visible) toTop.classList.remove('is-launching');
       };
       window.addEventListener('scroll', () => {
         if (!topFrame) topFrame = requestAnimationFrame(updateToTop);
       }, {passive:true});
+      window.addEventListener('resize', updateToTop);
+      toTop.addEventListener('animationend', event => {
+        if (event.animationName === 'navari-top-launch') toTop.classList.remove('is-launching');
+      });
       toTop.addEventListener('click', () => {
+        toTop.classList.add('is-launching');
         document.querySelector('.header .brand')?.focus({preventScroll:true});
         window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
       });
