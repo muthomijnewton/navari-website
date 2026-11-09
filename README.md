@@ -50,7 +50,7 @@ unique HTML/block IDs, page headings and export consistency.
 | Route | Content |
 | --- | --- |
 | `/home` (site homepage) | Hero, eight featured apps, open-source benefits, integrations, delivery process and stories |
-| `/services` | Fourteen filterable solutions, product details, implementation services and FAQs |
+| `/services` | Fifteen filterable solutions, product details, implementation services and FAQs |
 | `/about` | Company, approach, partnership recognition and careers enquiry |
 | `/stories` | Curated customer experiences and news linking to the official Navari archive |
 | `/contacts` | Enquiry form with solution preselection and optional consultation preference |

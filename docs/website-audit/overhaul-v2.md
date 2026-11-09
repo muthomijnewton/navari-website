@@ -29,7 +29,7 @@ resolve its unverified or underspecified items:
 
 - Solutions, Company and Resources navigation panels; touch drawer at 900px and
   below, Escape handling, keyboard focus containment and focus restoration.
-- Fourteen categorized solutions with native expandable details and official
+- Fifteen categorized solutions with native expandable details and official
   product links. Eight are featured on the homepage.
 - Accessible category buttons with pressed state and live result counts.
 - App deep links open their details and reset filters to make the target visible.
@@ -88,3 +88,11 @@ browser checks used the user's local environment.
   its generated Jinja was rendered using the registered Builder filters without
   connecting to or modifying a Frappe database.
 - A successful real backend submission and email delivery remain staging checks.
+
+## App links — 9 November 2026
+
+App icons, headings, navigation entries and Explore links now open the matching
+product/module URL in a new tab, with `noopener noreferrer`. Sales and Procurement
+are separate catalogue entries. The M-Pesa and Kenya compliance integration rows
+use their specific documentation pages. Internal contact and page navigation links
+continue within the website.
